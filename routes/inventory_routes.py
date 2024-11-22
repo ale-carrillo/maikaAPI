@@ -15,6 +15,7 @@ class InventoryRoutes(Blueprint):
         self.route('/api/v1/inventories', methods=['GET'])(self.get_inventories)
         self.route('/api/v1/inventories', methods=['POST'])(self.add_inventories)
         self.route('/api/v1/inventories/<int:inventory_id>', methods = ['PUT'])(self.update_inventory)
+        self.route('/api/v1/inventories/existence/<int:inventory_id>', methods = ['PUT'])(self.update_inventory_existence)
         self.route('/api/v1/inventories/<int:inventory_id>', methods = ['DELETE'])(self.delete_inventory)
         self.route('/healthcheck', methods=['GET'])(self.healthcheck)
     
@@ -115,7 +116,7 @@ class InventoryRoutes(Blueprint):
                 'in': 'path',
                 'required': True,
                 'type': 'string',
-                'description': 'ID of the inventory to delete'
+                'description': 'ID of the inventory to update'
             },
             {
                 'name': 'body',
@@ -188,6 +189,77 @@ class InventoryRoutes(Blueprint):
             updated_inventory = self.inventory_service.update_inventory(inventory_id, update_inventory)
             if updated_inventory:
                 return jsonify(update_inventory), 200
+            else:            
+                return jsonify({'error': 'Inventory not found'}), 404
+        except Exception as e:
+            self.logger.error(f'Error updating the inventory in the database: {e}')
+            return jsonify({'error': f'An exception has ocurred: {e}'})
+    
+    @swag_from({
+        'tags': ['Inventories'],
+        'parameters': [
+            {
+                'name': 'inventory_id',
+                'in': 'path',
+                'required': True,
+                'type': 'string',
+                'description': 'ID of the inventory to update its existence'
+            },
+            {
+                'name': 'body',
+                'in': 'body',
+                'required': True,
+                'schema': {
+                    'type': 'object',
+                    'properties': {
+                        'existence': {'type': 'integer'},
+                    },
+                    'required': ['existence']
+                }
+            }
+        ],
+        'responses': {
+            200: {
+                'description': 'Existence inventory successfully updated',
+                'schema': {
+                    'type': 'object',
+                    'properties': {
+                        '_id': {'type': 'string'},
+                        'name': {'type': 'string'},
+                        'unit': {'type': 'string'},
+                        'existence': {'type': 'integer'},
+                        'image': {'type': 'string'},
+                    }
+                }
+            },
+            400: {
+                'description': 'Invalid data'
+            },
+            404: {
+                'description': 'Inventory not found'
+            },
+            500: {
+                'description': 'Internal server error'
+            }
+        }
+    })
+    def update_inventory_existence(self, inventory_id):
+        try:
+            request_data = request.json    
+            
+            if not request_data:
+                return jsonify({'error': 'Invalid data'}), 400
+            
+            existence = request_data.get('existence')
+
+            try:
+                self.inventory_schema.validate_existence(existence)
+            except ValidationError as e:
+                return jsonify({'error': f'Invalid data {e}'}), 400
+            
+            updated_inventory = self.inventory_service.update_inventory_existence(inventory_id, existence)
+            if updated_inventory:
+                return jsonify(updated_inventory), 200
             else:            
                 return jsonify({'error': 'Inventory not found'}), 404
         except Exception as e:

@@ -40,7 +40,7 @@ class InventoryService:
             if update_inventory:
                 updated_inventory = self.db_conn.db.inventories.update_one({'_id': inventory_id}, {'$set': inventory})
                 if updated_inventory.modified_count > 0:
-                    return updated_inventory
+                    return inventory
                 else:
                     return 'The inventory is already up-to-date'
             else:
@@ -48,6 +48,24 @@ class InventoryService:
         except Exception as e:
             self.logger.error(f'Error updating the inventory: {e}')
             return jsonify({'error': f'Error updating the inventory: {e}'}), 500
+        
+    def update_inventory_existence(self, inventory_id, existence):
+        try:
+            update_inventory = self.get_inventory_by_id(inventory_id)
+
+            if update_inventory:
+                updated_inventory = self.db_conn.db.inventories.update_one({'_id': inventory_id}, {'$set': {'existence': existence}})
+                if updated_inventory.modified_count > 0:
+                    self.logger.info("INCIO")
+                    update_inventory["existence"] = existence
+                    return update_inventory
+                else:
+                    return 'The inventory existence is already up-to-date'
+            else:
+                return None
+        except Exception as e:
+            self.logger.error(f'Error updating the inventory existence: {e}')
+            return jsonify({'error': f'Error updating the inventory existence: {e}'}), 500
         
     def delete_inventory(self, inventory_id):
         try:
