@@ -3,7 +3,7 @@ from logger.logger_base import Logger
 from pymongo import MongoClient
 
 class PaymentModel():
-    def __init__(self):
+    def _init_(self):
         self.client = None
         self.db = None
         self.logger = Logger()
@@ -12,12 +12,12 @@ class PaymentModel():
         # Obtener las variables de entorno
         mongodb_user = os.environ.get('MONGODB_USER')
         mongodb_pass = os.environ.get('MONGODB_PASS')
-        mongodb_host = os.environ.get('MONGO_HOST')
+        mongodb_host = os.environ.get('MONGODB_HOST')
 
         # Verificar si todas las variables de entorno están presentes
         if not mongodb_user or not mongodb_pass or not mongodb_host:
             self.logger.critical('MongoDB environment variables are required')
-            raise ValueError('Set environment variables: MONGODB_USER, MONGODB_PASS, MONGO_HOST')
+            raise ValueError('Set environment variables: MONGODB_USER, MONGODB_PASS, MONGODB_HOST')
 
         try:
             # Conectar a MongoDB
@@ -49,7 +49,7 @@ class PaymentModel():
         if self.client:
             self.client.close()
 
-if __name__ == '__main__':
+if __name__ == '_main_':
     db_conn = PaymentModel()
     logger = Logger()
 

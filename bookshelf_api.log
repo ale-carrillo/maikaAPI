@@ -439,3 +439,5 @@ with app.app_context(). See the documentation for more information.
 2024-11-22 04:17:43 PM: INFO [_internal.py:97]  * Debugger PIN: 617-895-121
 2024-11-22 04:17:49 PM: ERROR [payment_route.py:57] Error adding a new payment: 'PaymentSchema' object has no attribute 'validate_user_id'
 2024-11-22 04:17:49 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 16:17:49] "[35m[1mPOST /api/v1/payments HTTP/1.1[0m" 500 -
+2024-11-22 06:23:10 PM: INFO [_internal.py:97]  * Detected change in '/home/andreacarreon/maikaaa/maikaAPI/app.py', reloading
+2024-11-22 06:23:11 PM: INFO [_internal.py:97]  * Restarting with stat

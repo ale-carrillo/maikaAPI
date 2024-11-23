@@ -8,7 +8,7 @@ from flasgger import Swagger
 
 app = Flask(__name__)
 CORS(app)
-
+swagger = Swagger(app)
 db_conn = PaymentModel()
 db_conn.connect_to_database()
 payment_service = PaymentService(db_conn)
@@ -17,15 +17,8 @@ payment_routes = PaymentRoutes(payment_service, payment_schema)
 app.register_blueprint(payment_routes)
 
 
-if __name__ == '__main__':
+if __name__ == '_main_':
     try:
         app.run(debug=True)
     finally:
         db_conn.close_connection()
-
-
-
-
-
-
-

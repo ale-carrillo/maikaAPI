@@ -1,11 +1,18 @@
 from marshmallow import Schema, fields, validates, ValidationError
 from logger.logger_base import Logger
 
+class ItemSchema(Schema):
+    name = fields.Str(required=True)
+    quantity = fields.Int(required=True)
+    price = fields.Float(required=True)
+
 # Definimos el esquema PaymentSchema con las validaciones
 class PaymentSchema(Schema):
-    mesa = fields.Integer(required=True)
-    numero_de_orden = fields.Integer(required=True)
+    name = fields.String(required=True)
+    table = fields.Integer(required=True)
     rfc = fields.String(required=True)
+    payment_type = fields.String(required=True)
+    items = fields.List(fields.Nested(ItemSchema), required=True)
 
     @validates('name')
     def validate_name(self, value):
@@ -18,19 +25,24 @@ class PaymentSchema(Schema):
             raise ValidationError('El RFC debe tener 13 caracteres alfanuméricos.')
     
     
-    @validates('mesa')
+    @validates('table')
     def validate_table(self, value):
         if not isinstance(value, int) or value < 1:
             raise ValidationError('La mesa debe ser un número entero mayor que 0.')
 
-    @validates('numero_de_orden')
-    def validate_order_number(self, value):
-        if not isinstance(value, int) or value < 1:
+    @validates('payment_type')
+    def validate_payment_type(self, value):
+        if not value:
+            raise ValidationError('El número de orden debe ser un número entero mayor que 0.')
+    
+    @validates('items')
+    def validate_items(self, value):
+        if not value or len(value) == 0:
             raise ValidationError('El número de orden debe ser un número entero mayor que 0.')
 
 
 # Prueba de validación
-if __name__ == '__main__':
+if __name__ == '_main_':
     logger = Logger()  # Instanciamos el logger
     schema = PaymentSchema()  # Creamos la instancia del esquema
 
