@@ -129,7 +129,7 @@ class ReservationRoute(Blueprint):
             return jsonify({ 'error': f'An exception has ocurred: {e}' }), 500
     
     @swag_from({
-        'tags': ['reservations'],
+        'tags': ['Reservations'],
         'parameters': [
             {
                 'name': 'reservation_id',
@@ -235,7 +235,7 @@ class ReservationRoute(Blueprint):
             return jsonify({'error': f'An exception has ocurred: {e}'})
     
     @swag_from({
-        'tags': ['reservations'],
+        'tags': ['Reservations'],
         'parameters': [
             {
                 'name': 'reservation_id',

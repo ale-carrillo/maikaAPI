@@ -1,5 +1,6 @@
 from datetime import datetime
 from marshmallow import Schema, fields, validates, ValidationError
+import re
 
 class ReservationSchema(Schema):
     date = fields.String(required=True)
@@ -13,14 +14,16 @@ class ReservationSchema(Schema):
 
     @validates('date')
     def validate_date(self, value):
-        if not value:
+        try:
+            datetime.strptime(value, '%d %b %Y %H:%M') 
+        except ValueError:
             raise ValidationError("Date must be in the format 'DD MMM YYYY HH:MM'")
 
     @validates('people')
     def validate_people(self, value):
         try:
-            if int(value) < 0:
-                raise ValidationError("Existence must be a non-negative integer.")
+            if int(value) < 1:
+                raise ValidationError("Existence must be a non-negative integer or there must be at least one person for the reservation")
         except:
             raise ValidationError("Existence must be a non-negative integer.")
 
@@ -49,9 +52,11 @@ class ReservationSchema(Schema):
         if value and len(value) > 255:
             raise ValidationError("Special instructions must not exceed 255 characters.")
 
+    @validates('email')
     def validate_email(self, value):
-        if not value:
-            raise ValidationError("Email must not be empty.")
+        email_regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+        if not re.match(email_regex, value):
+            raise ValidationError("Invalid email address.")
 
 if __name__ == "__main__":
     from logger.logger_base import Logger
