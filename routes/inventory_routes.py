@@ -3,6 +3,7 @@ from marshmallow import ValidationError
 from logger.logger_base import Logger
 from flasgger import swag_from
 
+# Routes for Inventory
 class InventoryRoutes(Blueprint):
     def __init__(self, inventory_service, inventory_schema):
         super().__init__('inventory', __name__)
@@ -11,6 +12,7 @@ class InventoryRoutes(Blueprint):
         self.register_routes()
         self.logger = Logger()
 
+    # Routes
     def register_routes(self):
         self.route('/api/v1/inventories', methods=['GET'])(self.get_inventories)
         self.route('/api/v1/inventories', methods=['POST'])(self.add_inventories)
@@ -39,6 +41,7 @@ class InventoryRoutes(Blueprint):
             }
         }
     })
+    # Getting all the inventories.
     def get_inventories(self):
         inventories = self.inventory_service.get_all_inventories()
         return jsonify(inventories), 200
@@ -74,6 +77,7 @@ class InventoryRoutes(Blueprint):
             }
         }
     })
+    # Adding new inventory
     def add_inventories(self):
         try:
             request_data = request.json
@@ -159,6 +163,7 @@ class InventoryRoutes(Blueprint):
             }
         }
     })
+    # Updating an inventory
     def update_inventory(self, inventory_id):
         try:
             request_data = request.json    
@@ -243,6 +248,7 @@ class InventoryRoutes(Blueprint):
             }
         }
     })
+    # Updating the existence for an inventory
     def update_inventory_existence(self, inventory_id):
         try:
             request_data = request.json    
@@ -289,6 +295,7 @@ class InventoryRoutes(Blueprint):
             }
         }
     })
+    # Deleting an inventory
     def delete_inventory(self, inventory_id):
         try:
             delete_inventory = self.inventory_service.delete_inventory(inventory_id)
@@ -318,5 +325,6 @@ class InventoryRoutes(Blueprint):
             }
         }
     })
+    # Veriifying a healthcheck
     def healthcheck(self):
         return jsonify({ 'status': 'up' }), 200

@@ -2,12 +2,14 @@ import os
 from logger.logger_base import Logger
 from pymongo import MongoClient
 
+# Inventory model
 class InventoryModel:
     def __init__(self):
         self.client = None
         self.db = None
         self.logger = Logger()
     
+    # Method to connect database
     def connect_to_database(self):
         mongodb_user = os.environ.get('MONGODB_USER')
         mongodb_pass = os.environ.get('MONGODB_PASS')
@@ -34,10 +36,12 @@ class InventoryModel:
             self.logger.critical(f'Failed to connect to the database: {e}')
             raise
 
+    # Method to close connection
     def close_connection(self):
         if self.client:
             self.client.close()
 
+# Test
 if __name__ == '__main__':
     db_conn = InventoryModel()
     logger = Logger()
