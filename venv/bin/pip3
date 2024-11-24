@@ -1,4 +1,4 @@
-#!/home/armando/backend/examples/maika-back/venv/bin/python3.12
+#!/home/armando/backend/examples/maikaAPI/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

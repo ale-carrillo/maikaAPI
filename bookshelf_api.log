@@ -1,0 +1,352 @@
+2024-11-22 01:38:11 PM: CRITICAL [order_model.py:17] MongoDB eviroment varaibles are required
+2024-11-22 01:38:11 PM: CRITICAL [order_model.py:48] An error occured Set enviroment variables: MONGODB_USER, MONGODB_PASS, MONGO_HOST
+2024-11-22 01:38:11 PM: INFO [order_model.py:51] Connection to the database was successfully closed
+2024-11-22 01:41:03 PM: CRITICAL [order_model.py:17] MongoDB eviroment varaibles are required
+2024-11-22 01:41:03 PM: CRITICAL [order_model.py:48] An error occured Set enviroment variables: MONGODB_USER, MONGODB_PASS, MONGO_HOST
+2024-11-22 01:41:03 PM: INFO [order_model.py:51] Connection to the database was successfully closed
+2024-11-22 01:41:41 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-22 01:41:41 PM: INFO [order_model.py:51] Connection to the database was successfully closed
+2024-11-22 01:45:01 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-22 01:45:01 PM: INFO [order_service.py:78] Orders fetched: [{'_id': 1, 'name': 'Orden1', 'table': 1}, {'_id': 2, 'name': 'Orden2', 'table': 3}, {'_id': 3, 'name': 'Orden3', 'table': 5}]
+2024-11-22 01:45:01 PM: INFO [order_service.py:82] New order added: {'product': 'Laptop', 'customer': 'John Doe', 'quantity': 2, 'status': 'Pending', '_id': 4}
+2024-11-22 01:45:01 PM: INFO [order_service.py:86] Order fetched by ID: {'_id': 3, 'name': 'Orden3', 'table': 5}
+2024-11-22 01:45:01 PM: INFO [order_service.py:91] Connection to database was successfully closed.
+2024-11-22 01:47:32 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-22 01:47:32 PM: INFO [order_service.py:78] Orders fetched: [{'_id': 1, 'name': 'Orden1', 'table': 1}, {'_id': 2, 'name': 'Orden2', 'table': 3}, {'_id': 3, 'name': 'Orden3', 'table': 5}, {'_id': 4, 'product': 'Laptop', 'customer': 'John Doe', 'quantity': 2, 'status': 'Pending'}]
+2024-11-22 01:47:32 PM: INFO [order_service.py:82] New order added: {'name': 'Orden1000', 'table': 100, '_id': 5}
+2024-11-22 01:47:32 PM: INFO [order_service.py:86] Order fetched by ID: {'_id': 3, 'name': 'Orden3', 'table': 5}
+2024-11-22 01:47:32 PM: INFO [order_service.py:91] Connection to database was successfully closed.
+2024-11-22 02:29:10 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-22 02:29:10 PM: INFO [order_service.py:78] Orders fetched: [{'_id': 1, 'name': 'Orden1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 15.99, 'quantity': 2}, {'name': 'Pasta', 'price': 12.5, 'quantity': 1}]}, {'_id': 2, 'name': 'Orden2', 'table': 3, 'dishes': [{'name': 'Burger', 'price': 10.99, 'quantity': 3}]}, {'_id': 3, 'name': 'Orden3', 'table': 5, 'dishes': [{'name': 'Salad', 'price': 7.5, 'quantity': 1}]}]
+2024-11-22 02:29:10 PM: INFO [order_service.py:89] New order added: {'name': 'Orden1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 15.99, 'quantity': 2}, {'name': 'Pasta', 'price': 12.5, 'quantity': 1}], '_id': 4}
+2024-11-22 02:29:10 PM: INFO [order_service.py:94] Order fetched by ID: {'_id': 3, 'name': 'Orden3', 'table': 5, 'dishes': [{'name': 'Salad', 'price': 7.5, 'quantity': 1}]}
+2024-11-22 02:29:10 PM: INFO [order_service.py:99] Connection to database was successfully closed.
+2024-11-22 02:48:20 PM: ERROR [order_schemas.py:33] An error has occurred: El nombre debe tener al menos 5 caracteres.
+2024-11-22 02:48:40 PM: ERROR [order_schemas.py:33] An error has occurred: El número de la mesa debe ser mayor que 0.
+2024-11-22 02:56:22 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-22 02:56:22 PM: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-22 02:56:22 PM: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-11-22 02:56:22 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-22 02:56:22 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-22 02:56:22 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-22 02:56:22 PM: INFO [_internal.py:97]  * Debugger PIN: 110-217-143
+2024-11-22 02:57:49 PM: ERROR [order_route.py:123] Error adding new order to the database: 'OrderSchema' object has no attribute 'validate_dishes'
+2024-11-22 02:57:49 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 14:57:49] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 500 -
+2024-11-22 03:00:58 PM: INFO [_internal.py:97]  * Detected change in '/home/armando/backend/examples/maikaAPI/schemas/order_schemas.py', reloading
+2024-11-22 03:00:59 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-22 03:00:59 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-22 03:00:59 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-22 03:00:59 PM: INFO [_internal.py:97]  * Debugger PIN: 110-217-143
+2024-11-22 03:01:03 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 15:01:03] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 201 -
+2024-11-22 03:13:54 PM: INFO [_internal.py:97]  * Detected change in '/home/armando/backend/examples/maikaAPI/services/order_service.py', reloading
+2024-11-22 03:13:55 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-22 03:13:56 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-22 03:13:56 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-22 03:13:56 PM: INFO [_internal.py:97]  * Debugger PIN: 110-217-143
+2024-11-22 03:13:59 PM: ERROR [order_service.py:39] Error creating the new order: name 'dishes' is not defined
+2024-11-22 03:13:59 PM: ERROR [order_route.py:123] Error adding new order to the database: Object of type Response is not JSON serializable
+2024-11-22 03:13:59 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 15:13:59] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 500 -
+2024-11-22 03:14:19 PM: INFO [_internal.py:97]  * Detected change in '/home/armando/backend/examples/maikaAPI/services/order_service.py', reloading
+2024-11-22 03:14:19 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-22 03:14:20 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-22 03:14:20 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-22 03:14:20 PM: INFO [_internal.py:97]  * Debugger PIN: 110-217-143
+2024-11-22 03:14:21 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 15:14:21] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 201 -
+2024-11-22 03:17:12 PM: INFO [_internal.py:97]  * Detected change in '/home/armando/backend/examples/maikaAPI/services/order_service.py', reloading
+2024-11-22 03:17:12 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-22 03:17:13 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-22 03:17:13 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-22 03:17:13 PM: INFO [_internal.py:97]  * Debugger PIN: 110-217-143
+2024-11-22 03:17:16 PM: ERROR [order_route.py:123] Error adding new order to the database: Object of type ObjectId is not JSON serializable
+2024-11-22 03:17:16 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 15:17:16] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 500 -
+2024-11-22 05:52:41 PM: INFO [_internal.py:97]  * Detected change in '/home/armando/backend/examples/maikaAPI/app.py', reloading
+2024-11-22 05:52:41 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-22 05:52:42 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-22 05:52:42 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-22 05:52:42 PM: INFO [_internal.py:97]  * Debugger PIN: 110-217-143
+2024-11-22 07:25:16 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 19:25:16] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-22 07:25:16 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 19:25:16] "[31m[1mPOST /api/v1/orders HTTP/1.1[0m" 400 -
+2024-11-22 07:25:25 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 19:25:25] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-22 07:25:25 PM: ERROR [order_route.py:123] Error adding new order to the database: Object of type ObjectId is not JSON serializable
+2024-11-22 07:25:25 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 19:25:25] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 500 -
+2024-11-22 07:48:47 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 19:48:47] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-22 07:48:47 PM: ERROR [order_route.py:123] Error adding new order to the database: Object of type ObjectId is not JSON serializable
+2024-11-22 07:48:47 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 19:48:47] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 500 -
+2024-11-22 07:52:47 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 19:52:47] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-22 07:52:47 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 19:52:47] "[31m[1mPOST /api/v1/orders HTTP/1.1[0m" 400 -
+2024-11-22 07:53:52 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 19:53:52] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-22 07:53:52 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 19:53:52] "[31m[1mPOST /api/v1/orders HTTP/1.1[0m" 400 -
+2024-11-22 08:16:32 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 20:16:32] "[35m[1mGET /api/v1/orders HTTP/1.1[0m" 500 -
+2024-11-22 08:18:18 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 20:18:18] "[35m[1mGET /api/v1/orders HTTP/1.1[0m" 500 -
+2024-11-22 08:21:43 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 20:21:43] "[35m[1mGET /api/v1/orders HTTP/1.1[0m" 500 -
+2024-11-22 08:46:51 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 20:46:51] "[33mGET / HTTP/1.1[0m" 404 -
+2024-11-22 08:46:51 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 20:46:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-22 08:47:05 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 20:47:05] "[32mGET /apidocs HTTP/1.1[0m" 308 -
+2024-11-22 08:47:05 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 20:47:05] "[35m[1mGET /apidocs/ HTTP/1.1[0m" 500 -
+2024-11-22 08:47:05 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 20:47:05] "[33mGET /apidocs/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 404 -
+2024-11-22 08:47:05 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 20:47:05] "[33mGET /apidocs/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 404 -
+2024-11-22 08:47:05 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 20:47:05] "[33mGET /apidocs/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 404 -
+2024-11-22 08:47:23 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 20:47:23] "[32mGET /apidocs HTTP/1.1[0m" 308 -
+2024-11-22 08:47:23 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 20:47:23] "[35m[1mGET /apidocs/ HTTP/1.1[0m" 500 -
+2024-11-22 08:47:23 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 20:47:23] "[33mGET /apidocs/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 404 -
+2024-11-22 08:47:23 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 20:47:23] "[33mGET /apidocs/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 404 -
+2024-11-22 08:47:23 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 20:47:23] "[33mGET /apidocs/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 404 -
+2024-11-22 09:01:25 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 21:01:25] "[35m[1mGET /api/v1/orders HTTP/1.1[0m" 500 -
+2024-11-23 03:22:41 PM: ERROR [order_route.py:123] Error adding new order to the database: Object of type ObjectId is not JSON serializable
+2024-11-23 03:22:41 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 15:22:41] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 500 -
+2024-11-23 03:22:51 PM: ERROR [order_route.py:123] Error adding new order to the database: Object of type ObjectId is not JSON serializable
+2024-11-23 03:22:51 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 15:22:51] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 500 -
+2024-11-23 03:23:47 PM: ERROR [order_route.py:123] Error adding new order to the database: Object of type ObjectId is not JSON serializable
+2024-11-23 03:23:47 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 15:23:47] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 500 -
+2024-11-23 03:25:11 PM: INFO [_internal.py:97]  * Detected change in '/home/armando/backend/examples/maikaAPI/services/order_service.py', reloading
+2024-11-23 03:25:12 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-23 03:37:21 PM: CRITICAL [order_model.py:17] MongoDB eviroment varaibles are required
+2024-11-23 03:38:17 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-23 03:38:17 PM: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-23 03:38:17 PM: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-11-23 03:38:17 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-23 03:38:18 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-23 03:38:18 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-23 03:38:18 PM: INFO [_internal.py:97]  * Debugger PIN: 291-675-052
+2024-11-23 03:39:14 PM: ERROR [order_service.py:66] Error creating the new order: unsupported operand type(s) for +: 'ObjectId' and 'int'
+2024-11-23 03:39:14 PM: ERROR [order_route.py:123] Error adding new order to the database: Object of type Response is not JSON serializable
+2024-11-23 03:39:14 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 15:39:14] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 500 -
+2024-11-23 03:41:38 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-23 03:41:38 PM: INFO [order_service.py:122] Orders fetched: [{'_id': 1, 'name': 'Orden1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 15.99, 'quantity': 2}, {'name': 'Pasta', 'price': 12.5, 'quantity': 1}]}, {'_id': 2, 'name': 'Orden2', 'table': 3, 'dishes': [{'name': 'Burger', 'price': 10.99, 'quantity': 3}]}, {'_id': 3, 'name': 'Orden3', 'table': 5, 'dishes': [{'name': 'Salad', 'price': 7.5, 'quantity': 1}]}, {'_id': 4, 'name': 'Orden1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 15.99, 'quantity': 2}, {'name': 'Pasta', 'price': 12.5, 'quantity': 1}]}, {'_id': 5, 'name': 'Orden 1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 10.0, 'quantity': 2}, {'name': 'Pasta', 'price': 8.5, 'quantity': 8}]}, {'_id': 6, 'name': 'Orden 1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 10.0, 'quantity': 2}, {'name': 'Pasta', 'price': 8.5, 'quantity': 8}]}, {'_id': ObjectId('6740f4dc7742792bd2cd1170'), 'name': 'Orden 1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 10.0, 'quantity': 2}, {'name': 'Pasta', 'price': 8.5, 'quantity': 8}], 'total_price': 88.0}, {'_id': ObjectId('67412f0563b9123d434f9fbb'), 'name': 'qqppppppppppppp', 'table': 1, 'dishes': [{'name': 'Tacos', 'price': 9.99, 'quantity': 1}], 'total_price': 9.99}, {'_id': ObjectId('6741347f63b9123d434f9fbc'), 'name': 'gyudsaui', 'table': 3, 'dishes': [{'name': 'Tacos', 'price': 9.99, 'quantity': 1}], 'total_price': 9.99}, {'_id': ObjectId('674247a163b9123d434f9fbd'), 'name': 'Orden 1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 10.0, 'quantity': 2}, {'name': 'Pasta', 'price': 8.5, 'quantity': 8}], 'total_price': 88.0}, {'_id': ObjectId('674247ab63b9123d434f9fbe'), 'name': 'Orden 1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 10.0, 'quantity': 2}, {'name': 'Pasta', 'price': 8.5, 'quantity': 8}], 'total_price': 88.0}, {'_id': ObjectId('674247e363b9123d434f9fbf'), 'name': 'Orden 1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 10.0, 'quantity': 2}, {'name': 'Pasta', 'price': 8.5, 'quantity': 68}], 'total_price': 598.0}]
+2024-11-23 03:41:38 PM: ERROR [order_service.py:66] Error creating the new order: unsupported operand type(s) for +: 'ObjectId' and 'int'
+2024-11-23 03:41:38 PM: ERROR [order_service.py:140] An error has occurred: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2024-11-23 03:41:38 PM: INFO [order_service.py:143] Connection to database was successfully closed.
+2024-11-23 03:49:08 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-23 03:49:08 PM: INFO [order_service.py:122] Orders fetched: [{'_id': 1, 'name': 'Orden1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 15.99, 'quantity': 2}, {'name': 'Pasta', 'price': 12.5, 'quantity': 1}]}, {'_id': 2, 'name': 'Orden2', 'table': 3, 'dishes': [{'name': 'Burger', 'price': 10.99, 'quantity': 3}]}, {'_id': 3, 'name': 'Orden3', 'table': 5, 'dishes': [{'name': 'Salad', 'price': 7.5, 'quantity': 1}]}, {'_id': 4, 'name': 'Orden1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 15.99, 'quantity': 2}, {'name': 'Pasta', 'price': 12.5, 'quantity': 1}]}, {'_id': 5, 'name': 'Orden 1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 10.0, 'quantity': 2}, {'name': 'Pasta', 'price': 8.5, 'quantity': 8}]}, {'_id': 6, 'name': 'Orden 1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 10.0, 'quantity': 2}, {'name': 'Pasta', 'price': 8.5, 'quantity': 8}]}, {'_id': ObjectId('6740f4dc7742792bd2cd1170'), 'name': 'Orden 1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 10.0, 'quantity': 2}, {'name': 'Pasta', 'price': 8.5, 'quantity': 8}], 'total_price': 88.0}, {'_id': ObjectId('67412f0563b9123d434f9fbb'), 'name': 'qqppppppppppppp', 'table': 1, 'dishes': [{'name': 'Tacos', 'price': 9.99, 'quantity': 1}], 'total_price': 9.99}, {'_id': ObjectId('6741347f63b9123d434f9fbc'), 'name': 'gyudsaui', 'table': 3, 'dishes': [{'name': 'Tacos', 'price': 9.99, 'quantity': 1}], 'total_price': 9.99}, {'_id': ObjectId('674247a163b9123d434f9fbd'), 'name': 'Orden 1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 10.0, 'quantity': 2}, {'name': 'Pasta', 'price': 8.5, 'quantity': 8}], 'total_price': 88.0}, {'_id': ObjectId('674247ab63b9123d434f9fbe'), 'name': 'Orden 1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 10.0, 'quantity': 2}, {'name': 'Pasta', 'price': 8.5, 'quantity': 8}], 'total_price': 88.0}, {'_id': ObjectId('674247e363b9123d434f9fbf'), 'name': 'Orden 1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 10.0, 'quantity': 2}, {'name': 'Pasta', 'price': 8.5, 'quantity': 68}], 'total_price': 598.0}]
+2024-11-23 03:49:08 PM: ERROR [order_service.py:66] Error creating the new order: unsupported operand type(s) for +: 'ObjectId' and 'int'
+2024-11-23 03:49:08 PM: ERROR [order_service.py:140] An error has occurred: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+2024-11-23 03:49:08 PM: INFO [order_service.py:143] Connection to database was successfully closed.
+2024-11-23 03:50:25 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-23 03:50:25 PM: INFO [order_service.py:122] Orders fetched: [{'_id': 1, 'name': 'Orden1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 15.99, 'quantity': 2}, {'name': 'Pasta', 'price': 12.5, 'quantity': 1}]}, {'_id': 2, 'name': 'Orden2', 'table': 3, 'dishes': [{'name': 'Burger', 'price': 10.99, 'quantity': 3}]}, {'_id': 3, 'name': 'Orden3', 'table': 5, 'dishes': [{'name': 'Salad', 'price': 7.5, 'quantity': 1}]}, {'_id': 4, 'name': 'Orden1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 15.99, 'quantity': 2}, {'name': 'Pasta', 'price': 12.5, 'quantity': 1}]}, {'_id': 5, 'name': 'Orden 1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 10.0, 'quantity': 2}, {'name': 'Pasta', 'price': 8.5, 'quantity': 8}]}, {'_id': 6, 'name': 'Orden 1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 10.0, 'quantity': 2}, {'name': 'Pasta', 'price': 8.5, 'quantity': 8}]}]
+2024-11-23 03:50:25 PM: INFO [order_service.py:133] New order added: {'name': 'Orden1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 15.99, 'quantity': 2}, {'name': 'Pasta', 'price': 12.5, 'quantity': 771}], '_id': 7}
+2024-11-23 03:50:25 PM: INFO [order_service.py:138] Order fetched by ID: {'_id': 3, 'name': 'Orden3', 'table': 5, 'dishes': [{'name': 'Salad', 'price': 7.5, 'quantity': 1}]}
+2024-11-23 03:50:25 PM: INFO [order_service.py:143] Connection to database was successfully closed.
+2024-11-23 04:16:42 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-23 04:16:42 PM: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-23 04:16:42 PM: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-11-23 04:16:42 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-23 04:16:42 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-23 04:16:42 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-23 04:16:42 PM: INFO [_internal.py:97]  * Debugger PIN: 291-675-052
+2024-11-23 04:16:46 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 16:16:46] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 05:19:39 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 17:19:39] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 05:33:52 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 17:33:52] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 05:35:14 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 17:35:14] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 05:35:36 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 17:35:36] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 05:37:02 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 17:37:02] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 05:39:02 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 17:39:02] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 05:39:31 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 17:39:31] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 05:39:34 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 17:39:34] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 05:40:24 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 17:40:24] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 05:42:47 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 17:42:47] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 05:45:09 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 17:45:09] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 05:53:31 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 17:53:31] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 05:54:51 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 17:54:51] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 05:57:33 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 17:57:33] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 05:57:33 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 17:57:33] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 201 -
+2024-11-23 07:00:37 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 19:00:37] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 07:00:37 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 19:00:37] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 201 -
+2024-11-23 07:00:55 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 19:00:55] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 11:09:28 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 23:09:28] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 11:10:29 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 23:10:29] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 11:10:29 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 23:10:29] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 11:15:04 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 23:15:04] "OPTIONS /api/v1/orders/9 HTTP/1.1" 200 -
+2024-11-23 11:15:04 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 23:15:04] "PUT /api/v1/orders/9 HTTP/1.1" 200 -
+2024-11-23 11:15:08 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 23:15:08] "PUT /api/v1/orders/9 HTTP/1.1" 200 -
+2024-11-23 11:15:16 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 23:15:16] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 11:15:40 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 23:15:40] "[33mOPTIONS /api/v1/orders/undefined HTTP/1.1[0m" 404 -
+2024-11-23 11:18:46 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 23:18:46] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 11:21:45 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 23:21:45] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 11:30:14 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 23:30:14] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 11:35:39 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 23:35:39] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 11:35:39 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 23:35:39] "[31m[1mPOST /api/v1/orders HTTP/1.1[0m" 400 -
+2024-11-23 11:38:45 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 23:38:45] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-23 11:38:45 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 23:38:45] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 201 -
+2024-11-23 11:44:22 PM: INFO [_internal.py:97] 127.0.0.1 - - [23/Nov/2024 23:44:22] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 12:04:45 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:04:45] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 12:09:33 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:09:33] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 12:10:01 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:10:01] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 12:11:26 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:11:26] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 12:35:27 AM: INFO [_internal.py:97]  * Detected change in '/home/armando/backend/examples/maikaAPI/services/order_service.py', reloading
+2024-11-24 12:35:28 AM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 12:35:28 AM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-24 12:35:28 AM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-24 12:35:28 AM: INFO [_internal.py:97]  * Debugger PIN: 291-675-052
+2024-11-24 12:36:40 AM: INFO [_internal.py:97]  * Detected change in '/home/armando/backend/examples/maikaAPI/services/order_service.py', reloading
+2024-11-24 12:36:40 AM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 12:36:41 AM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-24 12:36:41 AM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-24 12:36:41 AM: INFO [_internal.py:97]  * Debugger PIN: 291-675-052
+2024-11-24 12:38:34 AM: CRITICAL [order_model.py:17] MongoDB eviroment varaibles are required
+2024-11-24 12:38:34 AM: ERROR [order_service.py:140] An error has occurred: Set enviroment variables: MONGODB_USER, MONGODB_PASS, MONGO_HOST
+2024-11-24 12:38:34 AM: INFO [order_service.py:143] Connection to database was successfully closed.
+2024-11-24 12:39:30 AM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-24 12:39:30 AM: INFO [order_service.py:122] Orders fetched: [{'_id': 1, 'name': 'Orden1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 15.99, 'quantity': 2}, {'name': 'Pasta', 'price': 12.5, 'quantity': 1}]}, {'_id': 2, 'name': 'Orden2', 'table': 3, 'dishes': [{'name': 'Burger', 'price': 10.99, 'quantity': 3}]}, {'_id': 3, 'name': 'Orden3', 'table': 5, 'dishes': [{'name': 'Salad', 'price': 7.5, 'quantity': 1}]}, {'_id': 4, 'name': 'Orden1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 15.99, 'quantity': 2}, {'name': 'Pasta', 'price': 12.5, 'quantity': 1}]}, {'_id': 5, 'name': 'Orden 1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 10.0, 'quantity': 2}, {'name': 'Pasta', 'price': 8.5, 'quantity': 8}]}, {'_id': 6, 'name': 'Orden 1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 10.0, 'quantity': 2}, {'name': 'Pasta', 'price': 8.5, 'quantity': 8}]}, {'_id': 7, 'name': 'Orden1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 15.99, 'quantity': 2}, {'name': 'Pasta', 'price': 12.5, 'quantity': 771}]}, {'_id': 8, 'name': 'qqqqqq', 'table': 2, 'dishes': [{'name': 'Tacos', 'price': 9.99, 'quantity': 1}]}, {'_id': 9, 'name': 'vvvvvv', 'table': 3333, 'dishes': [{'name': 'Burger', 'price': 11.99, 'quantity': 1}]}, {'_id': 10, 'name': 'hiuhiu', 'table': 3, 'dishes': [{'name': 'Tacos', 'price': 9.99, 'quantity': 1}]}]
+2024-11-24 12:39:30 AM: INFO [order_service.py:133] New order added: {'name': 'Orden1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 15.99, 'quantity': 2}, {'name': 'Pasta', 'price': 12.5, 'quantity': 771}], '_id': 200}
+2024-11-24 12:39:30 AM: INFO [order_service.py:138] Order fetched by ID: {'_id': 3, 'name': 'Orden3', 'table': 5, 'dishes': [{'name': 'Salad', 'price': 7.5, 'quantity': 1}]}
+2024-11-24 12:39:30 AM: INFO [order_service.py:143] Connection to database was successfully closed.
+2024-11-24 12:39:58 AM: INFO [_internal.py:97]  * Detected change in '/home/armando/backend/examples/maikaAPI/services/order_service.py', reloading
+2024-11-24 12:39:59 AM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 12:40:00 AM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-24 12:40:00 AM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-24 12:40:00 AM: INFO [_internal.py:97]  * Debugger PIN: 291-675-052
+2024-11-24 12:40:03 AM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-24 12:40:03 AM: INFO [order_service.py:122] Orders fetched: [{'_id': 1, 'name': 'Orden1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 15.99, 'quantity': 2}, {'name': 'Pasta', 'price': 12.5, 'quantity': 1}]}, {'_id': 2, 'name': 'Orden2', 'table': 3, 'dishes': [{'name': 'Burger', 'price': 10.99, 'quantity': 3}]}, {'_id': 3, 'name': 'Orden3', 'table': 5, 'dishes': [{'name': 'Salad', 'price': 7.5, 'quantity': 1}]}, {'_id': 4, 'name': 'Orden1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 15.99, 'quantity': 2}, {'name': 'Pasta', 'price': 12.5, 'quantity': 1}]}, {'_id': 5, 'name': 'Orden 1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 10.0, 'quantity': 2}, {'name': 'Pasta', 'price': 8.5, 'quantity': 8}]}, {'_id': 6, 'name': 'Orden 1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 10.0, 'quantity': 2}, {'name': 'Pasta', 'price': 8.5, 'quantity': 8}]}, {'_id': 7, 'name': 'Orden1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 15.99, 'quantity': 2}, {'name': 'Pasta', 'price': 12.5, 'quantity': 771}]}, {'_id': 8, 'name': 'qqqqqq', 'table': 2, 'dishes': [{'name': 'Tacos', 'price': 9.99, 'quantity': 1}]}, {'_id': 9, 'name': 'vvvvvv', 'table': 3333, 'dishes': [{'name': 'Burger', 'price': 11.99, 'quantity': 1}]}, {'_id': 10, 'name': 'hiuhiu', 'table': 3, 'dishes': [{'name': 'Tacos', 'price': 9.99, 'quantity': 1}]}, {'_id': 200, 'name': 'Orden1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 15.99, 'quantity': 2}, {'name': 'Pasta', 'price': 12.5, 'quantity': 771}]}]
+2024-11-24 12:40:03 AM: INFO [order_service.py:133] New order added: {'name': 'Orden1', 'table': 1, 'dishes': [{'name': 'Pizza', 'price': 15.99, 'quantity': 2}, {'name': 'Pasta', 'price': 12.5, 'quantity': 771}], '_id': 299}
+2024-11-24 12:40:03 AM: INFO [order_service.py:138] Order fetched by ID: {'_id': 3, 'name': 'Orden3', 'table': 5, 'dishes': [{'name': 'Salad', 'price': 7.5, 'quantity': 1}]}
+2024-11-24 12:40:03 AM: INFO [order_service.py:143] Connection to database was successfully closed.
+2024-11-24 12:40:16 AM: INFO [_internal.py:97]  * Detected change in '/home/armando/backend/examples/maikaAPI/services/order_service.py', reloading
+2024-11-24 12:40:16 AM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 12:40:16 AM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-24 12:40:17 AM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-24 12:40:17 AM: INFO [_internal.py:97]  * Debugger PIN: 291-675-052
+2024-11-24 12:40:30 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:40:30] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 12:42:09 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:42:09] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 12:43:04 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:43:04] "OPTIONS /api/v1/orders/10 HTTP/1.1" 200 -
+2024-11-24 12:43:04 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:43:04] "DELETE /api/v1/orders/10 HTTP/1.1" 200 -
+2024-11-24 12:43:36 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:43:36] "OPTIONS /api/v1/orders/9 HTTP/1.1" 200 -
+2024-11-24 12:43:36 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:43:36] "DELETE /api/v1/orders/9 HTTP/1.1" 200 -
+2024-11-24 12:44:16 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:44:16] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 12:44:16 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:44:16] "[31m[1mPOST /api/v1/orders HTTP/1.1[0m" 400 -
+2024-11-24 12:44:49 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:44:49] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 12:44:49 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:44:49] "[31m[1mPOST /api/v1/orders HTTP/1.1[0m" 400 -
+2024-11-24 12:44:52 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:44:52] "[31m[1mPOST /api/v1/orders HTTP/1.1[0m" 400 -
+2024-11-24 12:45:17 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:45:17] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 12:45:17 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:45:17] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 201 -
+2024-11-24 12:45:17 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:45:17] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 201 -
+2024-11-24 12:46:58 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:46:58] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 12:46:58 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 00:46:58] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 201 -
+2024-11-24 02:36:16 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 02:36:16] "OPTIONS /api/v1/orders/8 HTTP/1.1" 200 -
+2024-11-24 02:36:16 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 02:36:16] "DELETE /api/v1/orders/8 HTTP/1.1" 200 -
+2024-11-24 02:38:56 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 02:38:56] "OPTIONS /api/v1/orders/2 HTTP/1.1" 200 -
+2024-11-24 02:38:56 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 02:38:56] "PUT /api/v1/orders/2 HTTP/1.1" 200 -
+2024-11-24 02:40:10 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 02:40:10] "OPTIONS /api/v1/orders/301 HTTP/1.1" 200 -
+2024-11-24 02:40:10 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 02:40:10] "PUT /api/v1/orders/301 HTTP/1.1" 200 -
+2024-11-24 02:41:48 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 02:41:48] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 05:32:21 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:32:21] "OPTIONS /api/v1/orders/4 HTTP/1.1" 200 -
+2024-11-24 05:32:21 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:32:21] "DELETE /api/v1/orders/4 HTTP/1.1" 200 -
+2024-11-24 05:32:23 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:32:23] "OPTIONS /api/v1/orders/5 HTTP/1.1" 200 -
+2024-11-24 05:32:23 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:32:23] "DELETE /api/v1/orders/5 HTTP/1.1" 200 -
+2024-11-24 05:32:25 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:32:25] "OPTIONS /api/v1/orders/6 HTTP/1.1" 200 -
+2024-11-24 05:32:25 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:32:25] "DELETE /api/v1/orders/6 HTTP/1.1" 200 -
+2024-11-24 05:32:30 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:32:30] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 05:32:50 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:32:50] "OPTIONS /api/v1/orders/302 HTTP/1.1" 200 -
+2024-11-24 05:32:50 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:32:50] "PUT /api/v1/orders/302 HTTP/1.1" 200 -
+2024-11-24 05:33:02 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:33:02] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 05:33:16 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:33:16] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 05:37:21 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:37:21] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 05:37:21 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:37:21] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 05:37:22 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:37:22] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 05:38:36 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:38:36] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 05:40:04 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:40:04] "OPTIONS /api/v1/orders/302 HTTP/1.1" 200 -
+2024-11-24 05:40:04 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:40:04] "PUT /api/v1/orders/302 HTTP/1.1" 200 -
+2024-11-24 05:40:58 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:40:58] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 05:42:56 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:42:56] "OPTIONS /api/v1/orders/299 HTTP/1.1" 200 -
+2024-11-24 05:42:56 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:42:56] "[31m[1mPUT /api/v1/orders/299 HTTP/1.1[0m" 400 -
+2024-11-24 05:43:10 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:43:10] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 05:53:19 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:53:19] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 05:53:19 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:53:19] "[31m[1mPOST /api/v1/orders HTTP/1.1[0m" 400 -
+2024-11-24 05:54:01 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:54:01] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 05:54:50 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:54:50] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 05:54:50 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:54:50] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 201 -
+2024-11-24 05:55:16 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:55:16] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 05:55:16 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:55:16] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 201 -
+2024-11-24 05:56:12 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:56:12] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 05:56:12 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:56:12] "[31m[1mPOST /api/v1/orders HTTP/1.1[0m" 400 -
+2024-11-24 05:56:36 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:56:36] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 05:56:36 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:56:36] "[31m[1mPOST /api/v1/orders HTTP/1.1[0m" 400 -
+2024-11-24 05:57:37 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:57:37] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 05:57:37 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:57:37] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 201 -
+2024-11-24 05:58:10 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:58:10] "OPTIONS /api/v1/orders/299 HTTP/1.1" 200 -
+2024-11-24 05:58:10 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 05:58:10] "DELETE /api/v1/orders/299 HTTP/1.1" 200 -
+2024-11-24 06:02:51 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 06:02:51] "OPTIONS /api/v1/orders/302 HTTP/1.1" 200 -
+2024-11-24 06:02:51 AM: ERROR [order_route.py:157] Error updating the order in the database: '<=' not supported between instances of 'NoneType' and 'int'
+2024-11-24 06:02:51 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 06:02:51] "[35m[1mPUT /api/v1/orders/302 HTTP/1.1[0m" 500 -
+2024-11-24 06:05:58 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 06:05:58] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 06:08:45 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 06:08:45] "OPTIONS /api/v1/orders/302 HTTP/1.1" 200 -
+2024-11-24 06:08:45 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 06:08:45] "DELETE /api/v1/orders/302 HTTP/1.1" 200 -
+2024-11-24 06:10:19 AM: INFO [_internal.py:97]  * Detected change in '/home/armando/backend/examples/maikaAPI/schemas/order_schemas.py', reloading
+2024-11-24 06:10:19 AM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 06:10:20 AM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-24 06:10:20 AM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-24 06:10:20 AM: INFO [_internal.py:97]  * Debugger PIN: 291-675-052
+2024-11-24 06:11:48 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 06:11:48] "OPTIONS /api/v1/orders/1 HTTP/1.1" 200 -
+2024-11-24 06:11:48 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 06:11:48] "DELETE /api/v1/orders/1 HTTP/1.1" 200 -
+2024-11-24 06:11:51 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 06:11:51] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 06:18:09 AM: INFO [_internal.py:97]  * Detected change in '/home/armando/backend/examples/maikaAPI/schemas/order_schemas.py', reloading
+2024-11-24 06:18:09 AM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 06:18:10 AM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-24 06:18:10 AM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-24 06:18:10 AM: INFO [_internal.py:97]  * Debugger PIN: 291-675-052
+2024-11-24 06:18:27 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 06:18:27] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 06:18:27 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 06:18:27] "[31m[1mPOST /api/v1/orders HTTP/1.1[0m" 400 -
+2024-11-24 06:19:01 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 06:19:01] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 06:19:01 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 06:19:01] "[31m[1mPOST /api/v1/orders HTTP/1.1[0m" 400 -
+2024-11-24 06:19:19 AM: INFO [_internal.py:97]  * Detected change in '/home/armando/backend/examples/maikaAPI/schemas/order_schemas.py', reloading
+2024-11-24 06:19:19 AM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 06:19:20 AM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-24 06:19:20 AM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-24 06:19:20 AM: INFO [_internal.py:97]  * Debugger PIN: 291-675-052
+2024-11-24 06:19:33 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 06:19:33] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 06:19:33 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 06:19:33] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 201 -
+2024-11-24 06:19:59 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 06:19:59] "GET /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 06:20:16 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 06:20:16] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 06:20:16 AM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 06:20:16] "[35m[1mPOST /api/v1/orders HTTP/1.1[0m" 201 -
+2024-11-24 01:25:11 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:25:11] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 01:25:11 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:25:11] "[31m[1mPOST /api/v1/orders HTTP/1.1[0m" 400 -
+2024-11-24 01:47:57 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:47:57] "[32mGET /apidocs HTTP/1.1[0m" 308 -
+2024-11-24 01:47:57 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:47:57] "GET /apidocs/ HTTP/1.1" 200 -
+2024-11-24 01:47:57 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:47:57] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 200 -
+2024-11-24 01:47:57 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:47:57] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2024-11-24 01:47:57 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:47:57] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+2024-11-24 01:47:57 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:47:57] "GET /flasgger_static/lib/jquery.min.js HTTP/1.1" 200 -
+2024-11-24 01:47:58 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:47:58] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -
+2024-11-24 01:47:58 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:47:58] "GET /apispec_1.json HTTP/1.1" 200 -
+2024-11-24 01:48:29 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:48:29] "GET /apidocs/ HTTP/1.1" 200 -
+2024-11-24 01:48:29 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:48:29] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2024-11-24 01:48:29 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:48:29] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+2024-11-24 01:48:29 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:48:29] "GET /flasgger_static/lib/jquery.min.js HTTP/1.1" 200 -
+2024-11-24 01:48:29 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:48:29] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 200 -
+2024-11-24 01:48:30 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:48:30] "GET /apispec_1.json HTTP/1.1" 200 -
+2024-11-24 01:50:52 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:50:52] "OPTIONS /api/v1/orders HTTP/1.1" 200 -
+2024-11-24 01:50:52 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:50:52] "[31m[1mPOST /api/v1/orders HTTP/1.1[0m" 400 -
+2024-11-24 02:19:48 PM: INFO [_internal.py:97]  * Detected change in '/home/armando/backend/examples/maikaAPI/services/order_service.py', reloading
+2024-11-24 02:19:48 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 02:19:49 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-24 02:19:49 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-24 02:19:49 PM: INFO [_internal.py:97]  * Debugger PIN: 291-675-052
+2024-11-24 02:20:48 PM: INFO [_internal.py:97]  * Detected change in '/home/armando/backend/examples/maikaAPI/services/order_service.py', reloading
+2024-11-24 02:20:48 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 02:20:49 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-24 02:20:49 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-24 02:20:49 PM: INFO [_internal.py:97]  * Debugger PIN: 291-675-052
+2024-11-24 02:20:59 PM: INFO [_internal.py:97]  * Detected change in '/home/armando/backend/examples/maikaAPI/schemas/order_schemas.py', reloading
+2024-11-24 02:21:00 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 02:21:01 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-24 02:21:01 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-24 02:21:01 PM: INFO [_internal.py:97]  * Debugger PIN: 291-675-052
+2024-11-24 02:21:19 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-24 02:21:19 PM: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-24 02:21:19 PM: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-11-24 02:21:19 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 02:21:19 PM: INFO [order_model.py:32] Connected to MongoDb databse successfully
+2024-11-24 02:21:19 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-24 02:21:19 PM: INFO [_internal.py:97]  * Debugger PIN: 291-675-052
+2024-11-24 02:21:46 PM: ERROR [order_schemas.py:53] An error has occurred: El nombre debe tener al menos 5 caracteres.
