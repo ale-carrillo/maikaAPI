@@ -11,6 +11,7 @@ class ReservationRoute(Blueprint):
         self.register_routes()
         self.logger = Logger()
 
+    # Register the API endpoints with corresponding methods
     def register_routes(self):
         self.route('/api/v1/reservations', methods=['GET'])(self.get_reservations)
         self.route('/api/v1/reservations', methods=['POST'])(self.add_reservation)
@@ -43,6 +44,7 @@ class ReservationRoute(Blueprint):
         }
     })
     def get_reservations(self):
+    # Fetches all reservations from the reservation service
         reservations = self.reservation_service.get_all_reservations()
         return jsonify(reservations), 200
     
@@ -82,6 +84,7 @@ class ReservationRoute(Blueprint):
         }
     })
     def add_reservation(self):
+    # Create a new reservation
         try:
             request_data = request.json
 
@@ -187,6 +190,7 @@ class ReservationRoute(Blueprint):
         }
     })
     def update_reservation(self, reservation_id):
+    # Update the reservation data
         try:
             request_data = request.json    
             
@@ -258,6 +262,7 @@ class ReservationRoute(Blueprint):
         }
     })
     def delete_reservation(self, reservation_id):
+    # Delete a reservation
         try:
             delete_reservation = self.reservation_service.delete_reservation(reservation_id)
 
@@ -287,4 +292,5 @@ class ReservationRoute(Blueprint):
         }
     })
     def healthcheck(self):
+    # Healhthcheck endpoint
         return jsonify({ 'status': 'up' }), 200

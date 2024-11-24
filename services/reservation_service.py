@@ -6,6 +6,7 @@ class ReservationService:
         self.logger = Logger()
         self.db_conn = db_conn
 
+    # Get all servervations
     def get_all_reservations(self):
         try:
             reservations = list(self.db_conn.db.reservations.find())
@@ -13,7 +14,8 @@ class ReservationService:
         except Exception as e:
             self.logger.error(f'Error fetching all reservations from the database: {e}')
             return jsonify({ 'error': f'Error fetching all reservations from the database: {e}' }), 500
-        
+    
+    # New reservation
     def add_reservation(self, new_reservation):
         try:
             last_reservation = self.db_conn.db.reservations.find_one(sort=[('_id', -1)])
@@ -25,6 +27,7 @@ class ReservationService:
             self.logger.error(f'Error creating the new reservation: {e}')
             return jsonify({ 'error': f'Error creating the new reservation: {e}' }), 500
         
+    # Get reservation by id
     def get_reservation_by_id(self, reservation_id):
         try:
             reservation = self.db_conn.db.reservations.find_one({'_id': reservation_id})
@@ -33,6 +36,7 @@ class ReservationService:
             self.logger.error(f'Error fetching the reservation id from the database: {e}')
             return jsonify({'error': f'Error fetching the reservation id from the database: {e}'}), 500
         
+    # Update a reservation by id
     def update_reservation(self, reservation_id, reservation):
         try:
             update_reservation = self.get_reservation_by_id(reservation_id)
@@ -49,6 +53,7 @@ class ReservationService:
             self.logger.error(f'Error updating the reservation: {e}')
             return jsonify({'error': f'Error updating the reservation: {e}'}), 500
         
+    # Delete a reservation by id
     def delete_reservation(self, reservation_id):
         try:
             deleted_reservation = self.get_reservation_by_id(reservation_id)
