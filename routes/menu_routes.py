@@ -28,6 +28,7 @@ class MenuRoutes(Blueprint):
                         'properties': {
                             'meal': { 'type': 'string' },
                             'description': { 'type': 'string' },
+                            'price': { 'type': 'integer' },
                         }
                     }
                 }
@@ -51,6 +52,7 @@ class MenuRoutes(Blueprint):
                     'properties': {
                         'meal': { 'type': 'string' },
                         'description': { 'type': 'string' },
+                        'price': { 'type': 'integer' },
                     },
                     'required': ['meal', 'description' ]
                 }
@@ -78,16 +80,19 @@ class MenuRoutes(Blueprint):
             
             meal = request_data.get('meal')
             description = request_data.get('description')
+            price = request_data.get('price')
 
             try:
                 self.menu_schema.validate_meal(meal)
                 self.menu_schema.validate_description(description)
+                self.menu_schema.validate_price(price)
             except ValidationError as e:
                 return jsonify({ 'error': 'Invalid data' }), 400
 
             new_meal = {
                 'meal': meal,
                 'description': description,
+                'price':price,
  
             }
 
