@@ -23,6 +23,12 @@ class MenuSchema:
         except:
             raise ValidationError("Price must be a non-negative integer.")
         
+    @validates('image')
+    def validate_image(self, value):
+        if not value:
+            raise ValidationError("Image must be a base-64-image string.")
+        
+        
 if __name__ == "__main__":
     from logger.logger_base import Logger
 

@@ -17,3 +17,35 @@
 2024-11-24 12:42:31 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 12:42:31] "[35m[1mPOST /menu-api/v1/menus HTTP/1.1[0m" 201 -
 2024-11-24 12:43:33 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 12:43:33] "GET /menu-api/v1/menus HTTP/1.1" 200 -
 2024-11-24 12:43:34 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 12:43:34] "GET /menu-api/v1/menus HTTP/1.1" 200 -
+2024-11-24 04:45:39 PM: INFO [menu_model.py:32] Connected to MongoDB database successfylly
+2024-11-24 04:45:39 PM: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-24 04:45:39 PM: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-11-24 04:45:39 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 04:45:40 PM: INFO [menu_model.py:32] Connected to MongoDB database successfylly
+2024-11-24 04:45:40 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-24 04:45:40 PM: INFO [_internal.py:97]  * Debugger PIN: 102-917-971
+2024-11-24 04:45:44 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:44] "GET /apidocs/ HTTP/1.1" 200 -
+2024-11-24 04:45:44 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:44] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-11-24 04:45:44 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:44] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-11-24 04:45:44 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:44] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2024-11-24 04:45:44 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:44] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-11-24 04:45:44 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:44] "GET /apispec_1.json HTTP/1.1" 200 -
+2024-11-24 04:45:51 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:51] "GET /apidocs/ HTTP/1.1" 200 -
+2024-11-24 04:45:51 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:51] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-11-24 04:45:51 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:51] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-11-24 04:45:51 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:51] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2024-11-24 04:45:51 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:51] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-11-24 04:45:52 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:52] "GET /apispec_1.json HTTP/1.1" 200 -
+2024-11-24 04:46:41 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:46:41] "GET /apidocs/ HTTP/1.1" 200 -
+2024-11-24 04:46:41 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:46:41] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-11-24 04:46:41 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:46:41] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-11-24 04:46:41 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:46:41] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-11-24 04:46:41 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:46:41] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2024-11-24 04:46:42 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:46:42] "GET /apispec_1.json HTTP/1.1" 200 -
+2024-11-24 04:46:48 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:46:48] "GET /menu-api/v1/menus HTTP/1.1" 200 -
+2024-11-24 04:46:51 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:46:51] "GET /menu-api/v1/menus HTTP/1.1" 200 -
+2024-11-24 04:47:00 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:47:00] "[35m[1mPOST /menu-api/v1/menus HTTP/1.1[0m" 201 -
+2024-11-24 04:47:01 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:47:01] "[35m[1mPOST /menu-api/v1/menus HTTP/1.1[0m" 201 -
+2024-11-24 04:47:27 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:47:27] "GET /menu-api/v1/menus HTTP/1.1" 200 -
+2024-11-24 04:50:23 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:50:23] "[35m[1mPOST /menu-api/v1/menus HTTP/1.1[0m" 201 -

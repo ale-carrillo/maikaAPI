@@ -29,6 +29,7 @@ class MenuRoutes(Blueprint):
                             'meal': { 'type': 'string' },
                             'description': { 'type': 'string' },
                             'price': { 'type': 'integer' },
+                            'image': { 'type': 'string' },
                         }
                     }
                 }
@@ -53,8 +54,9 @@ class MenuRoutes(Blueprint):
                         'meal': { 'type': 'string' },
                         'description': { 'type': 'string' },
                         'price': { 'type': 'integer' },
+                        'image': { 'type': 'string' },
                     },
-                    'required': ['meal', 'description' ]
+                    'required': ['meal', 'description','price','image' ]
                 }
             }
         ],
@@ -81,11 +83,13 @@ class MenuRoutes(Blueprint):
             meal = request_data.get('meal')
             description = request_data.get('description')
             price = request_data.get('price')
+            image = request_data.get('image')
 
             try:
                 self.menu_schema.validate_meal(meal)
                 self.menu_schema.validate_description(description)
                 self.menu_schema.validate_price(price)
+                self.menu_schema.validate_image(image)
             except ValidationError as e:
                 return jsonify({ 'error': 'Invalid data' }), 400
 
@@ -93,6 +97,7 @@ class MenuRoutes(Blueprint):
                 'meal': meal,
                 'description': description,
                 'price':price,
+                'image': image
  
             }
 
