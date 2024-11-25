@@ -6,59 +6,71 @@ class ItemSchema(Schema):
     quantity = fields.Int(required=True)
     price = fields.Float(required=True)
 
-# Definimos el esquema PaymentSchema con las validaciones
 class PaymentSchema(Schema):
     name = fields.String(required=True)
     table = fields.Integer(required=True)
+    order_id = fields.Integer(required=True)
+    total = fields.Float(required=True)
     rfc = fields.String(required=True)
     payment_type = fields.String(required=True)
-    items = fields.List(fields.Nested(ItemSchema), required=True)
+    dishes = fields.List(fields.Nested(ItemSchema), required=True)
 
-    @validates('name')
-    def validate_name(self, value):
-        if len(value) < 1 or not value.isalnum():
-            raise ValidationError('El RFC debe tener 13 caracteres alfanuméricos.')
-        
+
     @validates('rfc')
     def validate_rfc(self, value):
         if len(value) != 13 or not value.isalnum():
-            raise ValidationError('El RFC debe tener 13 caracteres alfanuméricos.')
-    
-    
+            raise ValidationError('The RFC must have exactly 13 alphanumeric characters.')
+
     @validates('table')
     def validate_table(self, value):
         if not isinstance(value, int) or value < 1:
-            raise ValidationError('La mesa debe ser un número entero mayor que 0.')
+            raise ValidationError('The table must be an integer greater than 0.')
+
+    @validates('order_id')
+    def validate_order_id(self, value):
+        if not isinstance(value, int) or value < 1:
+            raise ValidationError('The order ID must be an integer greater than 0.')
+
+    @validates('total')
+    def validate_total(self, value):
+        if not isinstance(value, int) or value < 1:
+            raise ValidationError('The total must be an integer greater than 0.')
 
     @validates('payment_type')
     def validate_payment_type(self, value):
         if not value:
-            raise ValidationError('El número de orden debe ser un número entero mayor que 0.')
-    
-    @validates('items')
-    def validate_items(self, value):
+            raise ValidationError('The payment type cannot be empty.')
+
+    @validates('dishes')
+    def validate_dishes(self, value):
         if not value or len(value) == 0:
-            raise ValidationError('El número de orden debe ser un número entero mayor que 0.')
+            raise ValidationError('The dishes field must contain at least one dish.')
 
-
-# Prueba de validación
-if __name__ == '_main_':
-    logger = Logger()  # Instanciamos el logger
-    schema = PaymentSchema()  # Creamos la instancia del esquema
-
-    # Datos de prueba con campos inválidos
-    new_payment = {
-        'name': "HOOOLLL",
-        'mesa': 3,  # Mesa inválida (debe ser mayor a 0)
-        'numero_de_orden': 12345,  # Número de orden válido
-        'rfc': 'INVALIDRFCGHA'  # RFC inválido (debe tener 13 caracteres alfanuméricos)
+if __name__ == '__main__':
+    schema = PaymentSchema()
+    payment_data = {
+        "_id": 311,
+        "name": "BHBHB DWUB",
+        "table": 4,
+        "dishes": [
+            {
+                "name": "Caesar Salad",
+                "price": 12,
+                "quantity": 1
+            },
+            {
+                "name": "Spaghetti Carbonara",
+                "price": 18,
+                "quantity": 1
+            }
+        ],
+        "total": 0,  
+        "rfc": "ABCD123456XYZ",  
+        "payment_type": "Credit Card"
     }
 
     try:
-        # Intentamos cargar los datos y validar
-        schema.load(new_payment)  # Esto valida el nuevo pago con el esquema
-        print("El pago es válido.")  # Si no se lanza ninguna excepción, se imprime que es válido
-
+        validated_data = schema.load(payment_data)
+        print("Validated data:", validated_data)
     except ValidationError as e:
-        # Si hay un error de validación, lo capturamos y lo mostramos
-        logger.error(f'An error has occurred: {e.messages}')  # Mostramos el error con los mensajes de validación
+        print("Validation errors:", e.messages)

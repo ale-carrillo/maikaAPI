@@ -4,8 +4,8 @@ from logger.logger_base import Logger
 from flasgger import swag_from
 
 class PaymentRoutes(Blueprint):
-    def _init_(self, payment_service, payment_schema):
-        super()._init('payment', __name__)
+    def __init__(self, payment_service, payment_schema):
+        super().__init__('payment', __name__)
         self.payment_service = payment_service
         self.payment_schema = payment_schema
         self.register_routes()
@@ -68,9 +68,10 @@ class PaymentRoutes(Blueprint):
                 'rfc': {'type': 'string'},
                 'payment_type': {'type': 'string'},
                 'table': {'type': 'integer'},
-                'items': {
+                'order_id': {'type': 'integer'},
+                'dishes': {
                     'type': 'array',
-                    'items': {
+                    'dishes': {
                         'type': 'object',
                         'properties': {
                             'name': {'type': 'string'},
@@ -81,7 +82,7 @@ class PaymentRoutes(Blueprint):
                     }
                 }
             },
-            'required': ['name', 'rfc', 'payment_type', 'table', 'items']
+            'required': ['name', 'rfc', 'payment_type', 'table', 'dishes']
         }
     }
 ],
@@ -123,23 +124,28 @@ class PaymentRoutes(Blueprint):
             rfc = request_data.get('rfc')
             payment_type = request_data.get('payment_type')
             table = request_data.get('table')
-            items = request_data.get('items')
+            dishes = request_data.get('dishes')
+            order_id = request_data.get('order_id')
+            total = request_data.get('total')
 
             try:
-                self.payment_schema.validate_name(name)
                 self.payment_schema.validate_rfc(rfc)
                 self.payment_schema.validate_payment_type(payment_type)
                 self.payment_schema.validate_table(table)
-                self.payment_schema.validate_items(items)
+                self.payment_schema.validate_dishes(dishes)
+                self.payment_schema.validate_order_id(order_id)
+                self.payment_schema.validate_total(total)
             except ValidationError as e:
                 return jsonify({'error': f'Invalid data: {e}'}), 400
 
             new_payment = {
                 'name': name,
                 'table': table,
-                'items': items,
+                'dishes': dishes,
                 'rfc': rfc,
-                'payment_type': payment_type
+                'payment_type': payment_type,
+                'order_id': order_id,
+                'total': total
             }
 
             created_payment = self.payment_service.add_payment(new_payment)
