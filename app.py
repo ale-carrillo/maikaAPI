@@ -1,5 +1,9 @@
 from flask import Flask
 from flask_cors import CORS
+from models.staff_model import StaffModel
+from services.staff_service import StaffService
+from schemas.staff_schema import StaffSchema
+from routes.staff_routes import StaffRoutes
 from models.inventory_model import InventoryModel
 from services.inventory_service import InventoryService
 from schemas.inventory_schema import InventorySchema
@@ -9,9 +13,19 @@ from flasgger import Swagger
 app = Flask(__name__)
 CORS(app)
 swagger = Swagger(app)
-db_conn = InventoryModel()
-db_conn.connect_to_database()
-inventory_service = InventoryService(db_conn)
+
+# Staff
+db_conn_staff = StaffModel()
+db_conn_staff.connect_to_database()
+staff_service = StaffService(db_conn_staff)
+staff_schema = StaffSchema()
+staff_routes = StaffRoutes(staff_service,staff_schema)
+app.register_blueprint(staff_routes)
+
+# Inventory
+db_conn_inventory = InventoryModel()
+db_conn_inventory.connect_to_database()
+inventory_service = InventoryService(db_conn_inventory)
 inventory_schema = InventorySchema()
 inventory_routes = InventoryRoutes(inventory_service, inventory_schema)
 app.register_blueprint(inventory_routes)
