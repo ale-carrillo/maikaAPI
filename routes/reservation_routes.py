@@ -30,11 +30,11 @@ class ReservationRoute(Blueprint):
                         'type': 'object',
                         'properties': {
                             'date': {'type': 'string'},
-                            'people': {'type': 'integer'},
+                            'people': {'type': 'string'},
                             't_reservation': {'type': 'string'},
                             'name': {'type': 'string'},
                             'last_name': {'type': 'string'},
-                            'phone': {'type': 'integer'},
+                            'phone': {'type': 'string'},
                             'email': {'type': 'string'},
                             'special': {'type': 'string'}
                         }
@@ -59,11 +59,11 @@ class ReservationRoute(Blueprint):
                     'type': 'object',
                     'properties': {
                         'date': {'type': 'string'},
-                        'people': {'type': 'integer'},
+                        'people': {'type': 'string'},
                         't_reservation': {'type': 'string'},
                         'name': {'type': 'string'},
                         'last_name': {'type': 'string'},
-                        'phone': {'type': 'integer'},
+                        'phone': {'type': 'string'},
                         'email': {'type': 'string'},
                         'special': {'type': 'string'}
                     },
@@ -149,11 +149,11 @@ class ReservationRoute(Blueprint):
                     'type': 'object',
                     'properties': {
                         'date': {'type': 'string', 'example': '21 Nov 2024 14:30'},
-                        'people': {'type': 'integer'},
+                        'people': {'type': 'string'},
                         't_reservation': {'type': 'string'},
                         'name': {'type': 'string'},
                         'last_name': {'type': 'string'},
-                        'phone': {'type': 'integer'},
+                        'phone': {'type': 'string'},
                         'email': {'type': 'string'},
                         'special': {'type': 'string'}
                     },
@@ -168,11 +168,11 @@ class ReservationRoute(Blueprint):
                     'type': 'object',
                     'properties': {
                         'date': {'type': 'string', 'example': '21 Nov 2024 14:30'},
-                        'people': {'type': 'integer'},
+                        'people': {'type': 'string'},
                         't_reservation': {'type': 'string'},
                         'name': {'type': 'string'},
                         'last_name': {'type': 'string'},
-                        'phone': {'type': 'integer'},
+                        'phone': {'type': 'string'},
                         'email': {'type': 'string'},
                         'special': {'type': 'string'}
                     }

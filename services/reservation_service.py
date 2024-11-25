@@ -82,11 +82,11 @@ if __name__ == '__main__':
         # Add reservation
         new_reservation = reservation_service.add_reservation(1, {
             'date': '22 Nov 2024 20:00',
-            'people': 2,
+            'people': '2',
             't_reservation': 'Romantic',
             'name': 'Anthony',
             'last_name': 'Sprouse',
-            'phone': 1234567890,
+            'phone': '1234567890',
             'email': 'ant@gmail.com',
             'special': 'Proposal'
         })
@@ -102,11 +102,11 @@ if __name__ == '__main__':
         # Update reservation
         new_reservation = reservation_service.update_reservation(1, {
             'date': '22 Nov 2024 20:00',
-            'people': 2,
+            'people': '2',
             't_reservation': 'Romantic',
             'name': 'Anthony',
             'last_name': 'Sprouse',
-            'phone': 1234567890,
+            'phone': '1234567890',
             'email': 'antony@gmail.com',
             'special': 'Proposal'
         })

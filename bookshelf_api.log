@@ -166,3 +166,106 @@
 2024-11-24 01:13:10 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:13:10] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
 2024-11-24 01:13:10 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:13:10] "GET /apispec_1.json HTTP/1.1" 200 -
 2024-11-24 01:13:10 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 13:13:10] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-11-24 05:08:04 PM: CRITICAL [reservation_model.py:17] MongoDB environment variables are required
+2024-11-24 05:08:33 PM: CRITICAL [reservation_model.py:17] MongoDB environment variables are required
+2024-11-24 05:09:02 PM: INFO [reservation_model.py:32] Connected to MongoDB database successfylly
+2024-11-24 05:09:02 PM: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-24 05:09:02 PM: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-11-24 05:09:02 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 05:09:03 PM: INFO [reservation_model.py:32] Connected to MongoDB database successfylly
+2024-11-24 05:09:03 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-24 05:09:03 PM: INFO [_internal.py:97]  * Debugger PIN: 510-533-482
+2024-11-24 05:09:13 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 17:09:13] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 05:09:38 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 17:09:38] "OPTIONS /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 05:09:38 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 17:09:38] "[31m[1mPOST /api/v1/reservations HTTP/1.1[0m" 400 -
+2024-11-24 05:10:04 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 17:10:04] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 05:12:05 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 17:12:05] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 05:40:13 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 17:40:13] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 05:40:34 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 17:40:34] "OPTIONS /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 05:40:34 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 17:40:34] "[31m[1mPOST /api/v1/reservations HTTP/1.1[0m" 400 -
+2024-11-24 05:44:38 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 17:44:38] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 05:44:51 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 17:44:51] "OPTIONS /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 05:44:51 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 17:44:51] "[31m[1mPOST /api/v1/reservations HTTP/1.1[0m" 400 -
+2024-11-24 05:45:49 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 17:45:49] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 05:57:04 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 17:57:04] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 05:57:12 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 17:57:12] "OPTIONS /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 05:57:12 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 17:57:12] "[31m[1mPOST /api/v1/reservations HTTP/1.1[0m" 400 -
+2024-11-24 06:03:19 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:03:19] "GET /apidocs/ HTTP/1.1" 200 -
+2024-11-24 06:03:19 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:03:19] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2024-11-24 06:03:19 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:03:19] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-11-24 06:03:19 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:03:19] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-11-24 06:03:19 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:03:19] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-11-24 06:03:20 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:03:20] "GET /apispec_1.json HTTP/1.1" 200 -
+2024-11-24 06:03:20 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:03:20] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-11-24 06:03:59 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:03:59] "[35m[1mPOST /api/v1/reservations HTTP/1.1[0m" 201 -
+2024-11-24 06:04:51 PM: INFO [_internal.py:97]  * Detected change in '/home/alecarrillo/maikaAPI/app.py', reloading
+2024-11-24 06:04:51 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 06:04:52 PM: INFO [reservation_model.py:32] Connected to MongoDB database successfylly
+2024-11-24 06:04:52 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-24 06:04:52 PM: INFO [_internal.py:97]  * Debugger PIN: 510-533-482
+2024-11-24 06:06:32 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:06:32] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 06:07:36 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:07:36] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 06:08:53 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:08:53] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 06:09:03 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:09:03] "OPTIONS /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 06:09:03 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:09:03] "[31m[1mPOST /api/v1/reservations HTTP/1.1[0m" 400 -
+2024-11-24 06:15:21 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:15:21] "OPTIONS /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 06:15:21 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:15:21] "[31m[1mPOST /api/v1/reservations HTTP/1.1[0m" 400 -
+2024-11-24 06:23:26 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:23:26] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 06:24:40 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:24:40] "OPTIONS /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 06:24:40 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:24:40] "[31m[1mPOST /api/v1/reservations HTTP/1.1[0m" 400 -
+2024-11-24 06:24:54 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:24:54] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 06:30:55 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:30:55] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 06:36:21 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:36:21] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 06:37:40 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:37:40] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 06:38:01 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:38:01] "OPTIONS /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 06:38:01 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:38:01] "[31m[1mPOST /api/v1/reservations HTTP/1.1[0m" 400 -
+2024-11-24 06:38:09 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:38:09] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 06:38:41 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:38:41] "OPTIONS /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 06:38:41 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:38:41] "[31m[1mPOST /api/v1/reservations HTTP/1.1[0m" 400 -
+2024-11-24 06:40:00 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:40:00] "GET /apidocs/ HTTP/1.1" 200 -
+2024-11-24 06:40:01 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:40:01] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-11-24 06:40:01 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:40:01] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-11-24 06:40:01 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:40:01] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-11-24 06:40:01 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:40:01] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2024-11-24 06:40:01 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:40:01] "GET /apispec_1.json HTTP/1.1" 200 -
+2024-11-24 06:40:01 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:40:01] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-11-24 06:40:22 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:40:22] "[31m[1mPOST /api/v1/reservations HTTP/1.1[0m" 400 -
+2024-11-24 06:40:31 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:40:31] "[31m[1mPOST /api/v1/reservations HTTP/1.1[0m" 400 -
+2024-11-24 06:40:40 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:40:40] "[35m[1mPOST /api/v1/reservations HTTP/1.1[0m" 201 -
+2024-11-24 06:48:54 PM: INFO [_internal.py:97]  * Detected change in '/home/alecarrillo/maikaAPI/schemas/reservation_schemas.py', reloading
+2024-11-24 06:48:54 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 06:48:55 PM: INFO [reservation_model.py:32] Connected to MongoDB database successfylly
+2024-11-24 06:48:55 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-24 06:48:55 PM: INFO [_internal.py:97]  * Debugger PIN: 510-533-482
+2024-11-24 06:49:30 PM: INFO [_internal.py:97]  * Detected change in '/home/alecarrillo/maikaAPI/services/reservation_service.py', reloading
+2024-11-24 06:49:30 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 06:49:31 PM: INFO [reservation_model.py:32] Connected to MongoDB database successfylly
+2024-11-24 06:49:31 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-24 06:49:31 PM: INFO [_internal.py:97]  * Debugger PIN: 510-533-482
+2024-11-24 06:49:58 PM: INFO [_internal.py:97]  * Detected change in '/home/alecarrillo/maikaAPI/routes/reservation_routes.py', reloading
+2024-11-24 06:49:59 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 06:50:00 PM: INFO [reservation_model.py:32] Connected to MongoDB database successfylly
+2024-11-24 06:50:00 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-24 06:50:00 PM: INFO [_internal.py:97]  * Debugger PIN: 510-533-482
+2024-11-24 06:50:06 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:50:06] "GET /apidocs/ HTTP/1.1" 200 -
+2024-11-24 06:50:06 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:50:06] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-11-24 06:50:06 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:50:06] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-11-24 06:50:06 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:50:06] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-11-24 06:50:06 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:50:06] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2024-11-24 06:50:06 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:50:06] "GET /apispec_1.json HTTP/1.1" 200 -
+2024-11-24 06:50:06 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:50:06] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2024-11-24 06:50:38 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:50:38] "[31m[1mPOST /api/v1/reservations HTTP/1.1[0m" 400 -
+2024-11-24 06:50:47 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:50:47] "[35m[1mPOST /api/v1/reservations HTTP/1.1[0m" 201 -
+2024-11-24 06:51:06 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:51:06] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 06:51:30 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:51:30] "OPTIONS /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 06:51:30 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:51:30] "[31m[1mPOST /api/v1/reservations HTTP/1.1[0m" 400 -
+2024-11-24 06:58:26 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:58:26] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 06:58:44 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:58:44] "OPTIONS /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 06:58:44 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:58:44] "[31m[1mPOST /api/v1/reservations HTTP/1.1[0m" 400 -
+2024-11-24 06:59:47 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 18:59:47] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 07:00:11 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 19:00:11] "OPTIONS /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 07:00:11 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 19:00:11] "[31m[1mPOST /api/v1/reservations HTTP/1.1[0m" 400 -
+2024-11-24 07:03:32 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 19:03:32] "GET /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 07:03:53 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 19:03:53] "OPTIONS /api/v1/reservations HTTP/1.1" 200 -
+2024-11-24 07:03:53 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 19:03:53] "[35m[1mPOST /api/v1/reservations HTTP/1.1[0m" 201 -

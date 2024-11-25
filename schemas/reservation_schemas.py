@@ -51,7 +51,7 @@ class ReservationSchema(Schema):
     # Custom validation for the 'phone' field
     @validates('phone')
     def validate_phone(self, value):
-        if len(str(value)) != 10:
+        if len(value) != 10:
             raise ValidationError("Phone must be exactly 10 digits long.")
 
     # Custom validation for the 'special' field
