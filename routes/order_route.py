@@ -112,10 +112,13 @@ class OrderRoutes(Blueprint):
             new_order = {
                 'name': name,
                 'table': table,
-                'dishes': dishes
+                'dishes': dishes,
+                'status':"pending"
+                
             }
 
             created_order = self.order_service.add_order(new_order)
+            self.logger.info(f'New Order Created: {created_order}')
             return jsonify(created_order), 201
         except Exception as e:
             self.logger.error(f'Error adding new order to the database: {e}')
@@ -167,7 +170,39 @@ class OrderRoutes(Blueprint):
         }
     })
     def update_order(self, order_id):
-        # Implementation...
+        try:
+            request_data = request.json
+            if not request_data:
+                return jsonify({'error': 'Invalid data'}), 400
+
+            name = request_data.get('name')
+            table = request_data.get('table')
+            dishes = request_data.get('dishes')
+
+            # Validate fields
+            try:
+                self.order_schema.validate_name(name)
+                self.order_schema.validate_table(table)
+                self.order_schema.validate_dishes(dishes)
+            except ValidationError as e:
+                return jsonify({'error': f'Invalid data: {e}'}), 400
+
+            update_order = {
+                '_id': order_id,
+                'name': name,
+                'table': table,
+                'dishes': dishes,
+                
+            }
+
+            updated_order = self.order_service.update_order(order_id, update_order)
+            if updated_order:
+                return jsonify(update_order), 200
+            else:
+                return jsonify({'error': 'Order not found'}), 404
+        except Exception as e:
+            self.logger.error(f'Error updating the order in the database: {e}')
+            return jsonify({'error': f'An exception has occurred: {e}'}), 500
 
     @swag_from({
         'tags': ['Orders'],
@@ -190,7 +225,15 @@ class OrderRoutes(Blueprint):
         }
     })
     def delete_order(self, order_id):
-        # Implementation...
+        try:
+            deleted_order = self.order_service.delete_order(order_id)
+            if deleted_order:
+                return jsonify(deleted_order), 200
+            else:
+                return jsonify({'error': 'Order not found'}), 404
+        except Exception as e:
+            self.logger.error(f'Error deleting the order data: {e}')
+            return jsonify({'error': f'Error deleting the order data: {e}'}), 500
 
     @swag_from({
         'tags': ['Health'],

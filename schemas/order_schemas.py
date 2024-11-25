@@ -39,24 +39,4 @@ class OrderSchema(Schema):
             if 'quantity' not in dish or dish['quantity'] <= 0:
                 raise ValidationError('The quantity of each dish must be greater than 0.')
 
-# Test example
-if __name__ == '__main__':
-    from marshmallow import ValidationError
 
-    schema = OrderSchema()
-
-    # Example of validation
-    order_data = {
-        "name": "John Doe",
-        "table": 5,
-        "dishes": [
-            {"name": "Pizza", "price": 14.99, "quantity": 2},
-            {"name": "Burger", "price": 11.99, "quantity": 1},
-        ]
-    }
-
-    try:
-        validated_data = schema.load(order_data)
-        print("Validated data:", validated_data)
-    except ValidationError as e:
-        print("Validation errors:", e.messages)
