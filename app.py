@@ -1,5 +1,9 @@
 from flask import Flask
 from flask_cors import CORS
+from models.menu_model import MenuModel
+from services.menu_services import MenuService
+from schemas.menu_schemas import MenuSchema
+from routes.menu_routes import MenuRoutes
 from models.reservation_model import ReservationModel
 from services.reservation_service import ReservationService
 from schemas.reservation_schemas import ReservationSchema
@@ -17,6 +21,14 @@ from flasgger import Swagger
 app = Flask(__name__)
 CORS(app)
 swagger = Swagger(app)
+
+# Menu
+db_conn_menu = MenuModel()
+db_conn_menu.connect_to_database()
+menu_service = MenuService(db_conn_menu)
+menu_schema = MenuSchema()
+menu_routes = MenuRoutes(menu_service, menu_schema)
+app.register_blueprint(menu_routes)
 
 # Reservations
 db_conn_reservation = ReservationModel()
