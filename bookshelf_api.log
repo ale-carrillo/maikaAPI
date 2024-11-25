@@ -1,443 +1,51 @@
-2024-11-22 10:42:59 AM: CRITICAL [payment_model.py:17] MongoDB eviroment varaibles are required
-2024-11-22 10:42:59 AM: CRITICAL [payment_model.py:48] An error occured Set enviroment variables: MONGODB_USER, MONGODB_PASS, MONGO_HOST
-2024-11-22 10:42:59 AM: INFO [payment_model.py:51] Connection to the database was successfully closed
-2024-11-22 10:50:36 AM: CRITICAL [payment_model.py:17] MongoDB eviroment varaibles are required
-2024-11-22 10:50:36 AM: CRITICAL [payment_model.py:48] An error occured Set enviroment variables: MONGODB_USER, MONGODB_PASS, MONGO_HOST
-2024-11-22 10:50:36 AM: INFO [payment_model.py:51] Connection to the database was successfully closed
-2024-11-22 10:52:29 AM: CRITICAL [payment_model.py:17] MongoDB eviroment varaibles are required
-2024-11-22 10:52:29 AM: CRITICAL [payment_model.py:48] An error occured Set enviroment variables: MONGODB_USER, MONGODB_PASS, MONGO_HOST
-2024-11-22 10:52:29 AM: INFO [payment_model.py:51] Connection to the database was successfully closed
-2024-11-22 10:56:06 AM: CRITICAL [payment_model.py:17] MongoDB eviroment varaibles are required
-2024-11-22 10:56:06 AM: CRITICAL [payment_model.py:48] An error occured Set enviroment variables: MONGODB_USER, MONGODB_PASS, MONGO_HOST
-2024-11-22 10:56:06 AM: INFO [payment_model.py:51] Connection to the database was successfully closed
-2024-11-22 10:58:39 AM: CRITICAL [payment_model.py:17] MongoDB eviroment varaibles are required
-2024-11-22 10:58:39 AM: CRITICAL [payment_model.py:48] An error occured Set enviroment variables: MONGODB_USER, MONGODB_PASS, MONGO_HOST
-2024-11-22 10:58:39 AM: INFO [payment_model.py:51] Connection to the database was successfully closed
-2024-11-22 10:59:39 AM: INFO [payment_model.py:51] Connection to the database was successfully closed
-2024-11-22 11:13:39 AM: INFO [payment_model.py:51] Connection to the database was successfully closed
-2024-11-22 11:14:01 AM: WARNING [payment_model.py:42] No collections found in the database
-2024-11-22 11:14:01 AM: INFO [payment_model.py:62] Connection to the database was successfully closed
-2024-11-22 11:15:35 AM: WARNING [payment_model.py:42] No collections found in the database
-2024-11-22 11:15:35 AM: INFO [payment_model.py:62] Connection to the database was successfully closed
-2024-11-22 11:38:14 AM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 11:38:14 AM: INFO [payment_model.py:62] Connection to the database was successfully closed
-2024-11-22 11:42:12 AM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 11:42:12 AM: INFO [payment_model.py:62] Connection to the database was successfully closed
-2024-11-22 11:55:47 AM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 11:55:47 AM: INFO [payment_services.py:78] Payments fetched: [{'_id': ObjectId('6740c6384771e33ec1aaac08'), 'order_id': '10002', 'items': [{'quantity': 3, 'price': 75}, {'quantity': 2, 'price': 120}]}]
-2024-11-22 11:55:47 AM: ERROR [payment_services.py:25] Error creating the new payment: unsupported operand type(s) for +: 'ObjectId' and 'int'
-2024-11-22 11:55:47 AM: ERROR [payment_services.py:89] An error has occurred: Working outside of application context.
-
-This typically means that you attempted to use functionality that needed
-the current application. To solve this, set up an application context
-with app.app_context(). See the documentation for more information.
-2024-11-22 11:55:47 AM: INFO [payment_services.py:92] Connection to database was successfully closed.
-2024-11-22 11:57:28 AM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 11:57:28 AM: INFO [payment_services.py:78] Payments fetched: [{'_id': ObjectId('6740c6384771e33ec1aaac08'), 'order_id': '10002', 'items': [{'quantity': 3, 'price': 75}, {'quantity': 2, 'price': 120}]}]
-2024-11-22 11:57:28 AM: ERROR [payment_services.py:25] Error creating the new payment: unsupported operand type(s) for +: 'ObjectId' and 'int'
-2024-11-22 11:57:28 AM: ERROR [payment_services.py:89] An error has occurred: Working outside of application context.
-
-This typically means that you attempted to use functionality that needed
-the current application. To solve this, set up an application context
-with app.app_context(). See the documentation for more information.
-2024-11-22 11:57:28 AM: INFO [payment_services.py:92] Connection to database was successfully closed.
-2024-11-22 11:59:24 AM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 11:59:24 AM: INFO [payment_services.py:78] Payments fetched: [{'_id': ObjectId('6740c6384771e33ec1aaac08'), 'order_id': '10002', 'items': [{'quantity': 3, 'price': 75}, {'quantity': 2, 'price': 120}]}]
-2024-11-22 11:59:24 AM: ERROR [payment_services.py:90] An error has occurred: 'PaymentService' object has no attribute 'add_order'
-2024-11-22 11:59:24 AM: INFO [payment_services.py:93] Connection to database was successfully closed.
-2024-11-22 11:59:56 AM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 11:59:56 AM: INFO [payment_services.py:78] Payments fetched: [{'_id': ObjectId('6740c6384771e33ec1aaac08'), 'order_id': '10002', 'items': [{'quantity': 3, 'price': 75}, {'quantity': 2, 'price': 120}]}]
-2024-11-22 11:59:56 AM: ERROR [payment_services.py:25] Error creating the new payment: unsupported operand type(s) for +: 'ObjectId' and 'int'
-2024-11-22 11:59:56 AM: ERROR [payment_services.py:90] An error has occurred: Working outside of application context.
-
-This typically means that you attempted to use functionality that needed
-the current application. To solve this, set up an application context
-with app.app_context(). See the documentation for more information.
-2024-11-22 11:59:56 AM: INFO [payment_services.py:93] Connection to database was successfully closed.
-2024-11-22 12:01:26 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 12:01:26 PM: INFO [payment_services.py:78] Payments fetched: [{'_id': 1, 'name': 'Orden1', 'table': 1}, {'_id': 2, 'name': 'Orden2', 'table': 3}, {'_id': 3, 'name': 'Orden3', 'table': 5}]
-2024-11-22 12:01:26 PM: INFO [payment_services.py:83] New payment added: {'name': 'Orden1000', 'table': 100, '_id': 4}
-2024-11-22 12:01:26 PM: INFO [payment_services.py:87] Fetched payment by ID: {'_id': 3, 'name': 'Orden3', 'table': 5}
-2024-11-22 12:01:26 PM: INFO [payment_services.py:93] Connection to database was successfully closed.
-2024-11-22 12:22:43 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 12:22:43 PM: INFO [payment_services.py:78] Payments fetched: [{'_id': 4, 'name': 'Orden1000', 'table': 100}, {'_id': 1, 'name': 'Orden1', 'table': 1, 'items': [{'dish': 'Platillo1', 'price': 150, 'quantity': 2}, {'dish': 'Platillo2', 'price': 100, 'quantity': 1}]}, {'_id': 2, 'name': 'Orden2', 'table': 3, 'items': [{'dish': 'Platillo3', 'price': 200, 'quantity': 3}, {'dish': 'Platillo4', 'price': 120, 'quantity': 2}]}, {'_id': 3, 'name': 'Orden3', 'table': 5, 'items': [{'dish': 'Platillo5', 'price': 180, 'quantity': 1}, {'dish': 'Platillo6', 'price': 250, 'quantity': 2}]}]
-2024-11-22 12:22:43 PM: INFO [payment_services.py:83] New payment added: {'name': 'Orden1000', 'table': 100, '_id': 5}
-2024-11-22 12:22:43 PM: INFO [payment_services.py:87] Fetched payment by ID: {'_id': 3, 'name': 'Orden3', 'table': 5, 'items': [{'dish': 'Platillo5', 'price': 180, 'quantity': 1}, {'dish': 'Platillo6', 'price': 250, 'quantity': 2}]}
-2024-11-22 12:22:43 PM: INFO [payment_services.py:93] Connection to database was successfully closed.
-2024-11-22 12:30:05 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 12:30:05 PM: INFO [payment_services.py:78] Payments fetched: [{'_id': 4, 'name': 'Orden1000', 'table': 100}, {'_id': 1, 'name': 'Orden1', 'table': 1, 'items': [{'dish': 'Platillo1', 'price': 150, 'quantity': 2}, {'dish': 'Platillo2', 'price': 100, 'quantity': 1}]}, {'_id': 2, 'name': 'Orden2', 'table': 3, 'items': [{'dish': 'Platillo3', 'price': 200, 'quantity': 3}, {'dish': 'Platillo4', 'price': 120, 'quantity': 2}]}, {'_id': 3, 'name': 'Orden3', 'table': 5, 'items': [{'dish': 'Platillo5', 'price': 180, 'quantity': 1}, {'dish': 'Platillo6', 'price': 250, 'quantity': 2}]}, {'_id': 5, 'name': 'Orden1000', 'table': 100}]
-2024-11-22 12:30:05 PM: INFO [payment_services.py:83] New payment added: {'name': 'Orden1000', 'table': 100, '_id': 6}
-2024-11-22 12:30:05 PM: INFO [payment_services.py:87] Fetched payment by ID: {'_id': 3, 'name': 'Orden3', 'table': 5, 'items': [{'dish': 'Platillo5', 'price': 180, 'quantity': 1}, {'dish': 'Platillo6', 'price': 250, 'quantity': 2}]}
-2024-11-22 12:30:05 PM: INFO [payment_services.py:93] Connection to database was successfully closed.
-2024-11-22 12:33:49 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 12:33:49 PM: INFO [payment_services.py:109] Payments fetched: [{'_id': 4, 'name': 'Orden1000', 'table': 100}, {'_id': 1, 'name': 'Orden1', 'table': 1, 'items': [{'dish': 'Platillo1', 'price': 150, 'quantity': 2}, {'dish': 'Platillo2', 'price': 100, 'quantity': 1}]}, {'_id': 2, 'name': 'Orden2', 'table': 3, 'items': [{'dish': 'Platillo3', 'price': 200, 'quantity': 3}, {'dish': 'Platillo4', 'price': 120, 'quantity': 2}]}, {'_id': 3, 'name': 'Orden3', 'table': 5, 'items': [{'dish': 'Platillo5', 'price': 180, 'quantity': 1}, {'dish': 'Platillo6', 'price': 250, 'quantity': 2}]}, {'_id': 5, 'name': 'Orden1000', 'table': 100}, {'_id': 6, 'name': 'Orden1000', 'table': 100}]
-2024-11-22 12:33:49 PM: INFO [payment_services.py:114] New payment added: {'name': 'Orden1000', 'table': 100, '_id': 7}
-2024-11-22 12:33:49 PM: INFO [payment_services.py:118] Fetched payment by ID: {'_id': 3, 'name': 'Orden3', 'table': 5, 'items': [{'dish': 'Platillo5', 'price': 180, 'quantity': 1}, {'dish': 'Platillo6', 'price': 250, 'quantity': 2}]}
-2024-11-22 12:33:49 PM: INFO [payment_services.py:124] Connection to database was successfully closed.
-2024-11-22 12:34:45 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 12:34:45 PM: INFO [payment_services.py:109] Payments fetched: [{'_id': 1, 'name': 'Orden1', 'table': 1, 'items': [{'dish': 'Platillo1', 'price': 150, 'quantity': 2}, {'dish': 'Platillo2', 'price': 100, 'quantity': 1}]}, {'_id': 5, 'name': 'Orden1000', 'table': 100}, {'_id': 6, 'name': 'Orden1000', 'table': 100}, {'_id': 7, 'name': 'Orden1000', 'table': 100}]
-2024-11-22 12:34:45 PM: INFO [payment_services.py:114] New payment added: {'name': 'Orden1000', 'table': 100, '_id': 8}
-2024-11-22 12:34:45 PM: INFO [payment_services.py:118] Fetched payment by ID: None
-2024-11-22 12:34:45 PM: INFO [payment_services.py:124] Connection to database was successfully closed.
-2024-11-22 12:40:50 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 12:40:50 PM: INFO [payment_services.py:109] Payments fetched: []
-2024-11-22 12:40:50 PM: INFO [payment_services.py:114] New payment added: {'name': 'Orden1000', 'table': 100, '_id': 1}
-2024-11-22 12:40:50 PM: INFO [payment_services.py:118] Fetched payment by ID: None
-2024-11-22 12:40:50 PM: INFO [payment_services.py:124] Connection to database was successfully closed.
-2024-11-22 12:46:59 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 12:46:59 PM: INFO [payment_services.py:108] Payments fetched: [{'_id': 1, 'name': 'Orden1000', 'table': 100}]
-2024-11-22 12:46:59 PM: INFO [payment_services.py:113] New payment added: {'name': 'Orden1000', 'table': 100, '_id': 2}
-2024-11-22 12:46:59 PM: INFO [payment_services.py:117] Fetched payment by ID: None
-2024-11-22 12:46:59 PM: INFO [payment_services.py:123] Connection to database was successfully closed.
-2024-11-22 12:48:40 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 12:48:40 PM: INFO [payment_services.py:107] Payments fetched: [{'_id': 1, 'name': 'Orden1000', 'table': 100}, {'_id': 2, 'name': 'Orden1000', 'table': 100}]
-2024-11-22 12:48:40 PM: INFO [payment_services.py:112] New payment added: {'name': 'Orden1000', 'table': 100, '_id': 3}
-2024-11-22 12:48:40 PM: ERROR [payment_services.py:135] An error has occurred: 'PaymentService' object has no attribute 'calculate_order_total'
-2024-11-22 12:48:40 PM: INFO [payment_services.py:138] Connection to database was successfully closed.
-2024-11-22 12:52:55 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 12:52:55 PM: INFO [payment_services.py:107] Payments fetched: [{'_id': 1, 'name': 'Orden1000', 'table': 100}, {'_id': 2, 'name': 'Orden1000', 'table': 100}, {'_id': 3, 'name': 'Orden1000', 'table': 100}, {'_id': 4, 'name': 'Orden1', 'table': 1, 'items': [{'dish': 'Platillo1', 'price': 150, 'quantity': 2}, {'dish': 'Platillo2', 'price': 100, 'quantity': 1}]}]
-2024-11-22 12:52:55 PM: INFO [payment_services.py:112] New payment added: {'name': 'Orden1000', 'table': 100, '_id': 5}
-2024-11-22 12:52:55 PM: INFO [payment_services.py:85] Processing item: Platillo1, Price: 150, Quantity: 2
-2024-11-22 12:52:55 PM: INFO [payment_services.py:85] Processing item: Platillo2, Price: 100, Quantity: 1
-2024-11-22 12:52:55 PM: INFO [payment_services.py:88] Total price for order Orden1: 400
-2024-11-22 12:52:55 PM: ERROR [payment_services.py:92] Error calculating total for order Orden1: Working outside of application context.
-
-This typically means that you attempted to use functionality that needed
-the current application. To solve this, set up an application context
-with app.app_context(). See the documentation for more information.
-2024-11-22 12:52:55 PM: ERROR [payment_services.py:135] An error has occurred: Working outside of application context.
-
-This typically means that you attempted to use functionality that needed
-the current application. To solve this, set up an application context
-with app.app_context(). See the documentation for more information.
-2024-11-22 12:52:55 PM: INFO [payment_services.py:138] Connection to database was successfully closed.
-2024-11-22 12:55:15 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 12:55:15 PM: INFO [payment_services.py:123] Payments fetched: [{'_id': 1, 'name': 'Orden1000', 'table': 100}, {'_id': 2, 'name': 'Orden1000', 'table': 100}, {'_id': 3, 'name': 'Orden1000', 'table': 100}, {'_id': 4, 'name': 'Orden1', 'table': 1, 'items': [{'dish': 'Platillo1', 'price': 150, 'quantity': 2}, {'dish': 'Platillo2', 'price': 100, 'quantity': 1}]}, {'_id': 5, 'name': 'Orden1000', 'table': 100}, {'_id': 6, 'name': 'Orden1', 'table': 1, 'items': [{'dish': 'Platillo1', 'price': 150, 'quantity': 2}, {'dish': 'Platillo2', 'price': 100, 'quantity': 1}]}]
-2024-11-22 12:55:15 PM: INFO [payment_services.py:79] Processing item: Platillo1, Price: 150, Quantity: 2
-2024-11-22 12:55:15 PM: INFO [payment_services.py:79] Processing item: Platillo2, Price: 100, Quantity: 1
-2024-11-22 12:55:15 PM: INFO [payment_services.py:82] Total price for order Orden1: 400
-2024-11-22 12:55:15 PM: INFO [payment_services.py:79] Processing item: Platillo1, Price: 150, Quantity: 2
-2024-11-22 12:55:15 PM: INFO [payment_services.py:79] Processing item: Platillo2, Price: 100, Quantity: 1
-2024-11-22 12:55:15 PM: INFO [payment_services.py:82] Total price for order Orden1: 400
-2024-11-22 12:55:15 PM: ERROR [payment_services.py:107] Error fetching orders with totals: Working outside of application context.
-
-This typically means that you attempted to use functionality that needed
-the current application. To solve this, set up an application context
-with app.app_context(). See the documentation for more information.
-2024-11-22 12:55:15 PM: ERROR [payment_services.py:139] An error has occurred: Working outside of application context.
-
-This typically means that you attempted to use functionality that needed
-the current application. To solve this, set up an application context
-with app.app_context(). See the documentation for more information.
-2024-11-22 12:55:15 PM: INFO [payment_services.py:142] Connection to database was successfully closed.
-2024-11-22 12:58:18 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 12:58:18 PM: INFO [payment_services.py:126] Payments fetched: [{'_id': 1, 'name': 'Orden1000', 'table': 100}, {'_id': 2, 'name': 'Orden1000', 'table': 100}, {'_id': 3, 'name': 'Orden1000', 'table': 100}, {'_id': 4, 'name': 'Orden1', 'table': 1, 'items': [{'dish': 'Platillo1', 'price': 150, 'quantity': 2}, {'dish': 'Platillo2', 'price': 100, 'quantity': 1}]}, {'_id': 5, 'name': 'Orden1000', 'table': 100}, {'_id': 6, 'name': 'Orden1', 'table': 1, 'items': [{'dish': 'Platillo1', 'price': 150, 'quantity': 2}, {'dish': 'Platillo2', 'price': 100, 'quantity': 1}]}]
-2024-11-22 12:58:18 PM: INFO [payment_services.py:80] Processing item: Platillo1, Price: 150, Quantity: 2
-2024-11-22 12:58:18 PM: INFO [payment_services.py:80] Processing item: Platillo2, Price: 100, Quantity: 1
-2024-11-22 12:58:18 PM: INFO [payment_services.py:83] Total price for order Orden1: 400
-2024-11-22 12:58:18 PM: INFO [payment_services.py:80] Processing item: Platillo1, Price: 150, Quantity: 2
-2024-11-22 12:58:18 PM: INFO [payment_services.py:80] Processing item: Platillo2, Price: 100, Quantity: 1
-2024-11-22 12:58:18 PM: INFO [payment_services.py:83] Total price for order Orden1: 400
-2024-11-22 12:58:18 PM: ERROR [payment_services.py:110] Error fetching orders with totals: Working outside of application context.
-
-This typically means that you attempted to use functionality that needed
-the current application. To solve this, set up an application context
-with app.app_context(). See the documentation for more information.
-2024-11-22 12:58:18 PM: ERROR [payment_services.py:142] An error has occurred: Working outside of application context.
-
-This typically means that you attempted to use functionality that needed
-the current application. To solve this, set up an application context
-with app.app_context(). See the documentation for more information.
-2024-11-22 12:58:18 PM: INFO [payment_services.py:145] Connection to database was successfully closed.
-2024-11-22 01:01:17 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 01:01:17 PM: INFO [payment_services.py:104] Payments fetched: [{'_id': 1, 'name': 'Orden1000', 'table': 100}, {'_id': 2, 'name': 'Orden1000', 'table': 100}, {'_id': 3, 'name': 'Orden1000', 'table': 100}, {'_id': 4, 'name': 'Orden1', 'table': 1, 'items': [{'dish': 'Platillo1', 'price': 150, 'quantity': 2}, {'dish': 'Platillo2', 'price': 100, 'quantity': 1}]}, {'_id': 5, 'name': 'Orden1000', 'table': 100}, {'_id': 6, 'name': 'Orden1', 'table': 1, 'items': [{'dish': 'Platillo1', 'price': 150, 'quantity': 2}, {'dish': 'Platillo2', 'price': 100, 'quantity': 1}]}]
-2024-11-22 01:01:17 PM: INFO [payment_services.py:51] Processing item: Platillo1, Price: 150, Quantity: 2
-2024-11-22 01:01:17 PM: INFO [payment_services.py:51] Processing item: Platillo2, Price: 100, Quantity: 1
-2024-11-22 01:01:17 PM: INFO [payment_services.py:54] Total price for order Orden1: 400
-2024-11-22 01:01:17 PM: INFO [payment_services.py:51] Processing item: Platillo1, Price: 150, Quantity: 2
-2024-11-22 01:01:17 PM: INFO [payment_services.py:51] Processing item: Platillo2, Price: 100, Quantity: 1
-2024-11-22 01:01:17 PM: INFO [payment_services.py:54] Total price for order Orden1: 400
-2024-11-22 01:01:17 PM: INFO [payment_services.py:109] Orders with totals: [{'order_name': 'Orden1000', 'total_price': 0}, {'order_name': 'Orden1000', 'total_price': 0}, {'order_name': 'Orden1000', 'total_price': 0}, {'order_name': 'Orden1', 'total_price': 400}, {'order_name': 'Orden1000', 'total_price': 0}, {'order_name': 'Orden1', 'total_price': 400}]
-2024-11-22 01:01:17 PM: INFO [payment_services.py:113] New payment added: {'name': 'Orden1000', 'table': 100, '_id': 7}
-2024-11-22 01:01:17 PM: INFO [payment_services.py:117] Fetched payment by ID: {'_id': 3, 'name': 'Orden1000', 'table': 100}
-2024-11-22 01:01:17 PM: INFO [payment_services.py:123] Connection to database was successfully closed.
-2024-11-22 01:09:10 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 01:09:10 PM: INFO [payment_services.py:64] Payments fetched: [{'_id': 1, 'name': 'Orden1000', 'table': 100}, {'_id': 2, 'name': 'Orden1000', 'table': 100}, {'_id': 3, 'name': 'Orden1000', 'table': 100}, {'_id': 4, 'name': 'Orden1', 'table': 1, 'items': [{'dish': 'Platillo1', 'price': 150, 'quantity': 2}, {'dish': 'Platillo2', 'price': 100, 'quantity': 1}]}, {'_id': 5, 'name': 'Orden1000', 'table': 100}, {'_id': 6, 'name': 'Orden1', 'table': 1, 'items': [{'dish': 'Platillo1', 'price': 150, 'quantity': 2}, {'dish': 'Platillo2', 'price': 100, 'quantity': 1}]}, {'_id': 7, 'name': 'Orden1000', 'table': 100}]
-2024-11-22 01:09:10 PM: ERROR [payment_services.py:80] An error has occurred: 'PaymentService' object has no attribute 'get_orders_with_totals'
-2024-11-22 01:09:10 PM: INFO [payment_services.py:83] Connection to database was successfully closed.
-2024-11-22 01:10:31 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 01:10:31 PM: INFO [payment_services.py:89] Payments fetched: [{'_id': 1, 'name': 'Orden1000', 'table': 100}, {'_id': 2, 'name': 'Orden1000', 'table': 100}, {'_id': 3, 'name': 'Orden1000', 'table': 100}, {'_id': 4, 'name': 'Orden1', 'table': 1, 'items': [{'dish': 'Platillo1', 'price': 150, 'quantity': 2}, {'dish': 'Platillo2', 'price': 100, 'quantity': 1}]}, {'_id': 5, 'name': 'Orden1000', 'table': 100}, {'_id': 6, 'name': 'Orden1', 'table': 1, 'items': [{'dish': 'Platillo1', 'price': 150, 'quantity': 2}, {'dish': 'Platillo2', 'price': 100, 'quantity': 1}]}, {'_id': 7, 'name': 'Orden1000', 'table': 100}]
-2024-11-22 01:10:31 PM: INFO [payment_services.py:94] Orders with totals: [{'order_name': 'Orden1000', 'total_price': 0}, {'order_name': 'Orden1000', 'total_price': 0}, {'order_name': 'Orden1000', 'total_price': 0}, {'order_name': 'Orden1', 'total_price': 400}, {'order_name': 'Orden1000', 'total_price': 0}, {'order_name': 'Orden1', 'total_price': 400}, {'order_name': 'Orden1000', 'total_price': 0}]
-2024-11-22 01:10:31 PM: INFO [payment_services.py:98] New payment added: {'name': 'Orden1000', 'table': 100, '_id': 8}
-2024-11-22 01:10:31 PM: INFO [payment_services.py:102] Fetched payment by ID: {'_id': 3, 'name': 'Orden1000', 'table': 100}
-2024-11-22 01:10:31 PM: INFO [payment_services.py:108] Connection to database was successfully closed.
-2024-11-22 01:12:30 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 01:12:30 PM: INFO [payment_services.py:89] Payments fetched: [{'_id': 1, 'name': 'Orden1000', 'table': 100}, {'_id': 2, 'name': 'Orden1000', 'table': 100}, {'_id': 3, 'name': 'Orden1000', 'table': 100}, {'_id': 4, 'name': 'Orden1', 'table': 1, 'items': [{'dish': 'Platillo1', 'price': 150, 'quantity': 2}, {'dish': 'Platillo2', 'price': 100, 'quantity': 1}]}, {'_id': 5, 'name': 'Orden1000', 'table': 100}, {'_id': 6, 'name': 'Orden1', 'table': 1, 'items': [{'dish': 'Platillo1', 'price': 150, 'quantity': 2}, {'dish': 'Platillo2', 'price': 100, 'quantity': 1}]}, {'_id': 7, 'name': 'Orden1000', 'table': 100}, {'_id': 8, 'name': 'Orden1000', 'table': 100}]
-2024-11-22 01:12:30 PM: INFO [payment_services.py:94] Orders with totals: [{'order_name': 'Orden1000', 'total_price': 0}, {'order_name': 'Orden1000', 'total_price': 0}, {'order_name': 'Orden1000', 'total_price': 0}, {'order_name': 'Orden1', 'total_price': 400}, {'order_name': 'Orden1000', 'total_price': 0}, {'order_name': 'Orden1', 'total_price': 400}, {'order_name': 'Orden1000', 'total_price': 0}, {'order_name': 'Orden1000', 'total_price': 0}]
-2024-11-22 01:12:30 PM: INFO [payment_services.py:98] New payment added: {'name': 'Orden1000', 'table': 100, '_id': 9}
-2024-11-22 01:12:30 PM: INFO [payment_services.py:102] Fetched payment by ID: {'_id': 3, 'name': 'Orden1000', 'table': 100}
-2024-11-22 01:12:30 PM: INFO [payment_services.py:108] Connection to database was successfully closed.
-2024-11-22 01:14:33 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 01:14:33 PM: INFO [payment_services.py:89] Payments fetched: [{'_id': 1, 'name': 'Orden1', 'table': 1, 'dish': 'Tacos al Pastor', 'price': 150}, {'_id': 2, 'name': 'Orden2', 'table': 3, 'dish': 'Enchiladas Verdes', 'price': 120}]
-2024-11-22 01:14:33 PM: INFO [payment_services.py:94] Orders with totals: [{'order_name': 'Orden1', 'total_price': 0}, {'order_name': 'Orden2', 'total_price': 0}]
-2024-11-22 01:14:33 PM: INFO [payment_services.py:98] New payment added: {'name': 'Orden1000', 'table': 100, '_id': 3}
-2024-11-22 01:14:33 PM: INFO [payment_services.py:102] Fetched payment by ID: {'_id': 3, 'name': 'Orden1000', 'table': 100}
-2024-11-22 01:14:33 PM: INFO [payment_services.py:108] Connection to database was successfully closed.
-2024-11-22 01:18:27 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 01:18:27 PM: INFO [payment_services.py:89] Payments fetched: [{'_id': 1, 'name': 'Orden1', 'table': 1, 'dish': 'Tacos al Pastor', 'price': 150}, {'_id': 2, 'name': 'Orden2', 'table': 3, 'dish': 'Enchiladas Verdes', 'price': 120}, {'_id': 3, 'name': 'Orden1000', 'table': 100}]
-2024-11-22 01:18:27 PM: INFO [payment_services.py:94] Orders with totals: [{'order_name': 'Orden1', 'total_price': 150}, {'order_name': 'Orden2', 'total_price': 120}, {'order_name': 'Orden1000', 'total_price': 0}]
-2024-11-22 01:18:27 PM: INFO [payment_services.py:98] New payment added: {'name': 'Orden1000', 'table': 100, '_id': 4}
-2024-11-22 01:18:27 PM: INFO [payment_services.py:102] Fetched payment by ID: {'_id': 3, 'name': 'Orden1000', 'table': 100}
-2024-11-22 01:18:27 PM: INFO [payment_services.py:108] Connection to database was successfully closed.
-2024-11-22 01:30:09 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 01:30:09 PM: INFO [payment_services.py:101] Payments fetched: [{'_id': 1, 'name': 'Orden1', 'table': 1, 'items': [], 'total_price': 0}, {'_id': 2, 'name': 'Orden2', 'table': 3, 'items': [], 'total_price': 0}, {'_id': 3, 'name': 'Orden1000', 'table': 100, 'items': [], 'total_price': 0}, {'_id': 4, 'name': 'Orden1000', 'table': 100, 'items': [], 'total_price': 0}]
-2024-11-22 01:30:09 PM: INFO [payment_services.py:106] Fetched payment by ID: {'_id': 1, 'name': 'Orden1', 'table': 1, 'dish': 'Tacos al Pastor', 'price': 150}
-2024-11-22 01:30:09 PM: INFO [payment_services.py:112] Payment update response: {'message': 'Payment updated successfully'}
-2024-11-22 01:30:09 PM: INFO [payment_services.py:118] Connection to database was successfully closed.
-2024-11-22 01:39:35 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 01:39:35 PM: ERROR [payment_services.py:42] Error fetching payments with orders and totals: 'dish'
-2024-11-22 01:39:35 PM: INFO [payment_services.py:103] Payments fetched: ({'error': "Error fetching payments with orders and totals: 'dish'"}, 500)
-2024-11-22 01:39:35 PM: INFO [payment_services.py:120] Connection to database was successfully closed.
-2024-11-22 01:40:53 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 01:40:53 PM: ERROR [payment_services.py:42] Missing dish or price in payment: {'_id': 3, 'name': 'Orden1000', 'table': 100}
-2024-11-22 01:40:53 PM: ERROR [payment_services.py:42] Missing dish or price in payment: {'_id': 4, 'name': 'Orden1000', 'table': 100}
-2024-11-22 01:40:53 PM: INFO [payment_services.py:112] Payments fetched: [{'_id': 1, 'name': 'Updated Payment Name', 'table': 1, 'items': [{'dish': 'Tacos al Pastor', 'price': 150}], 'total_price': 150}, {'_id': 2, 'name': 'Orden2', 'table': 3, 'items': [{'dish': 'Enchiladas Verdes', 'price': 120}], 'total_price': 120}, {'_id': 3, 'name': 'Orden1000', 'table': 100, 'items': [], 'total_price': 0}]
-2024-11-22 01:40:53 PM: INFO [payment_services.py:129] Connection to database was successfully closed.
-2024-11-22 01:44:12 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 01:44:12 PM: INFO [payment_services.py:31] No items for payment: 1
-2024-11-22 01:44:12 PM: INFO [payment_services.py:31] No items for payment: 2
-2024-11-22 01:44:12 PM: INFO [payment_services.py:31] No items for payment: 3
-2024-11-22 01:44:12 PM: INFO [payment_services.py:31] No items for payment: 4
-2024-11-22 01:44:12 PM: INFO [payment_services.py:115] Payments fetched: [{'_id': 1, 'name': 'Updated Payment Name', 'table': 1, 'items': [], 'total_price': 0}, {'_id': 2, 'name': 'Orden2', 'table': 3, 'items': [], 'total_price': 0}, {'_id': 3, 'name': 'Orden1000', 'table': 100, 'items': [], 'total_price': 0}, {'_id': 4, 'name': 'Orden1000', 'table': 100, 'items': [], 'total_price': 0}]
-2024-11-22 01:44:12 PM: INFO [payment_services.py:132] Connection to database was successfully closed.
-2024-11-22 02:16:26 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 02:16:26 PM: INFO [payment_services.py:89] Payments fetched: [{'_id': 1, 'name': 'Updated Payment Name', 'table': 1, 'dish': 'Tacos al Pastor', 'price': 150}, {'_id': 2, 'name': 'Orden2', 'table': 3, 'dish': 'Enchiladas Verdes', 'price': 120}, {'_id': 3, 'name': 'Orden1000', 'table': 100}, {'_id': 4, 'name': 'Orden1000', 'table': 100}]
-2024-11-22 02:16:26 PM: INFO [payment_services.py:94] Orders with totals: [{'order_name': 'Updated Payment Name', 'total_price': 150}, {'order_name': 'Orden2', 'total_price': 120}, {'order_name': 'Orden1000', 'total_price': 0}, {'order_name': 'Orden1000', 'total_price': 0}]
-2024-11-22 02:16:26 PM: INFO [payment_services.py:98] New payment added: {'name': 'Orden1000', 'table': 100, '_id': 5}
-2024-11-22 02:16:26 PM: INFO [payment_services.py:102] Fetched payment by ID: {'_id': 3, 'name': 'Orden1000', 'table': 100}
-2024-11-22 02:16:26 PM: INFO [payment_services.py:108] Connection to database was successfully closed.
-2024-11-22 02:16:51 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 02:16:51 PM: INFO [payment_services.py:104] Payments fetched: [{'_id': 1, 'name': 'Updated Payment Name', 'table': 1, 'dish': 'Tacos al Pastor', 'price': 150}, {'_id': 2, 'name': 'Orden2', 'table': 3, 'dish': 'Enchiladas Verdes', 'price': 120}, {'_id': 3, 'name': 'Orden1000', 'table': 100}, {'_id': 4, 'name': 'Orden1000', 'table': 100}, {'_id': 5, 'name': 'Orden1000', 'table': 100}]
-2024-11-22 02:16:51 PM: INFO [payment_services.py:109] Orders with totals: [{'order_name': 'Updated Payment Name', 'total_price': 0}, {'order_name': 'Orden2', 'total_price': 0}, {'order_name': 'Orden1000', 'total_price': 0}, {'order_name': 'Orden1000', 'total_price': 0}, {'order_name': 'Orden1000', 'total_price': 0}]
-2024-11-22 02:16:51 PM: INFO [payment_services.py:113] New payment added: {'name': 'Orden1000', 'table': 100, '_id': 6}
-2024-11-22 02:16:51 PM: INFO [payment_services.py:117] Fetched payment by ID: {'_id': 3, 'name': 'Orden1000', 'table': 100}
-2024-11-22 02:16:51 PM: INFO [payment_services.py:123] Connection to database was successfully closed.
-2024-11-22 02:20:32 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 02:20:32 PM: INFO [payment_services.py:104] Payments fetched: [{'_id': 1, 'name': 'Updated Payment Name', 'table': 1, 'dish': 'Tacos al Pastor', 'price': 150}, {'_id': 2, 'name': 'Orden2', 'table': 3, 'dish': 'Enchiladas Verdes', 'price': 120}, {'_id': 3, 'name': 'Orden1000', 'table': 100}, {'_id': 4, 'name': 'Orden1000', 'table': 100}, {'_id': 5, 'name': 'Orden1000', 'table': 100}, {'_id': 6, 'name': 'Orden1000', 'table': 100}]
-2024-11-22 02:20:32 PM: INFO [payment_services.py:115] Connection to database was successfully closed.
-2024-11-22 02:24:42 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 02:24:42 PM: INFO [payment_services.py:104] Payments fetched: []
-2024-11-22 02:24:42 PM: INFO [payment_services.py:115] Connection to database was successfully closed.
-2024-11-22 02:25:44 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 02:25:44 PM: INFO [payment_services.py:104] Payments fetched: []
-2024-11-22 02:25:44 PM: INFO [payment_services.py:115] Connection to database was successfully closed.
-2024-11-22 02:27:04 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 02:27:04 PM: INFO [payment_services.py:105] Payments fetched: []
-2024-11-22 02:27:04 PM: INFO [payment_services.py:109] Orders with totals: []
-2024-11-22 02:27:04 PM: INFO [payment_services.py:116] Connection to database was successfully closed.
-2024-11-22 02:27:24 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 02:27:24 PM: INFO [payment_services.py:105] Payments fetched: []
-2024-11-22 02:27:24 PM: INFO [payment_services.py:109] Orders with totals: []
-2024-11-22 02:27:24 PM: INFO [payment_services.py:116] Connection to database was successfully closed.
-2024-11-22 02:31:06 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 02:31:06 PM: INFO [payment_services.py:105] Payments fetched: [{'_id': 1, 'name': 'Orden1', 'table': 1, 'dish': 'Tacos al Pastor', 'price': 150}, {'_id': 2, 'name': 'Orden2', 'table': 3, 'dish': 'Enchiladas Verdes', 'price': 120}, {'_id': 3, 'name': 'Orden3', 'table': 5, 'dish': 'Enchiladas Verdes', 'price': 120}]
-2024-11-22 02:31:06 PM: INFO [payment_services.py:109] Orders with totals: [{'order_name': 'Orden1', 'total_price': 0}, {'order_name': 'Orden2', 'total_price': 0}, {'order_name': 'Orden3', 'total_price': 0}]
-2024-11-22 02:31:06 PM: INFO [payment_services.py:116] Connection to database was successfully closed.
-2024-11-22 02:33:55 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 02:33:55 PM: INFO [payment_services.py:105] Payments fetched: [{'_id': 1, 'name': 'Order1', 'items': [{'dish': 'Tacos al Pastor', 'price': 50, 'quantity': 3}, {'dish': 'Agua de Horchata', 'price': 30, 'quantity': 2}]}]
-2024-11-22 02:33:55 PM: INFO [payment_services.py:51] Processing item: Tacos al Pastor, Price: 50, Quantity: 3
-2024-11-22 02:33:55 PM: INFO [payment_services.py:51] Processing item: Agua de Horchata, Price: 30, Quantity: 2
-2024-11-22 02:33:55 PM: INFO [payment_services.py:54] Total price for order Order1: 210
-2024-11-22 02:33:55 PM: INFO [payment_services.py:109] Orders with totals: [{'order_name': 'Order1', 'total_price': 210}]
-2024-11-22 02:33:55 PM: INFO [payment_services.py:116] Connection to database was successfully closed.
-2024-11-22 02:37:51 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 02:37:51 PM: INFO [payment_services.py:105] Payments fetched: [{'_id': 1, 'name': 'Order1', 'items': [{'dish': 'Tacos al Pastor', 'price': 50, 'quantity': 3}, {'dish': 'Agua de Horchata', 'price': 30, 'quantity': 2}]}]
-2024-11-22 02:37:51 PM: INFO [payment_services.py:51] Processing item: Tacos al Pastor, Price: 50, Quantity: 3
-2024-11-22 02:37:51 PM: INFO [payment_services.py:51] Processing item: Agua de Horchata, Price: 30, Quantity: 2
-2024-11-22 02:37:51 PM: INFO [payment_services.py:54] Total price for order Order1: 210
-2024-11-22 02:37:51 PM: INFO [payment_services.py:109] Orders with totals: [{'order_name': 'Order1', 'total_price': 210}]
-2024-11-22 02:37:51 PM: INFO [payment_services.py:116] Connection to database was successfully closed.
-2024-11-22 02:44:44 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 02:44:44 PM: INFO [payment_services.py:105] Payments fetched: [{'_id': 1, 'name': 'Order1', 'items': [{'dish': 'Tacos al Pastor', 'price': 50, 'quantity': 3}, {'dish': 'Agua de Horchata', 'price': 30, 'quantity': 2}]}, {'_id': 2, 'name': 'Order2', 'items': [{'dish': 'Pozole', 'price': 120, 'quantity': 1}, {'dish': 'Coca-Cola', 'price': 25, 'quantity': 2}]}, {'_id': 3, 'name': 'Order3', 'items': [{'dish': 'Enchiladas Verdes', 'price': 90, 'quantity': 2}, {'dish': 'Flan Napolitano', 'price': 40, 'quantity': 1}, {'dish': 'Café de Olla', 'price': 35, 'quantity': 2}]}]
-2024-11-22 02:44:44 PM: INFO [payment_services.py:51] Processing item: Tacos al Pastor, Price: 50, Quantity: 3
-2024-11-22 02:44:44 PM: INFO [payment_services.py:51] Processing item: Agua de Horchata, Price: 30, Quantity: 2
-2024-11-22 02:44:44 PM: INFO [payment_services.py:54] Total price for order Order1: 210
-2024-11-22 02:44:44 PM: INFO [payment_services.py:51] Processing item: Pozole, Price: 120, Quantity: 1
-2024-11-22 02:44:44 PM: INFO [payment_services.py:51] Processing item: Coca-Cola, Price: 25, Quantity: 2
-2024-11-22 02:44:44 PM: INFO [payment_services.py:54] Total price for order Order2: 170
-2024-11-22 02:44:44 PM: INFO [payment_services.py:51] Processing item: Enchiladas Verdes, Price: 90, Quantity: 2
-2024-11-22 02:44:44 PM: INFO [payment_services.py:51] Processing item: Flan Napolitano, Price: 40, Quantity: 1
-2024-11-22 02:44:44 PM: INFO [payment_services.py:51] Processing item: Café de Olla, Price: 35, Quantity: 2
-2024-11-22 02:44:44 PM: INFO [payment_services.py:54] Total price for order Order3: 290
-2024-11-22 02:44:44 PM: INFO [payment_services.py:109] Orders with totals: [{'order_name': 'Order1', 'total_price': 210}, {'order_name': 'Order2', 'total_price': 170}, {'order_name': 'Order3', 'total_price': 290}]
-2024-11-22 02:44:44 PM: INFO [payment_services.py:116] Connection to database was successfully closed.
-2024-11-22 03:06:16 PM: ERROR [payment_schemas.py:39] An error has occurred: {'mesa': ['La mesa debe ser un número entero positivo mayor que 0.'], 'rfc': ['El RFC debe tener 13 caracteres alfanuméricos.']}
-2024-11-22 03:07:32 PM: ERROR [payment_schemas.py:39] An error has occurred: {'rfc': ['El RFC debe tener 13 caracteres alfanuméricos.']}
-2024-11-22 03:07:56 PM: ERROR [payment_schemas.py:39] An error has occurred: {'rfc': ['El RFC debe tener 13 caracteres alfanuméricos.']}
-2024-11-22 03:20:13 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 03:20:13 PM: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2024-11-24 12:36:31 PM: CRITICAL [menu_model.py:34] Failed to connect to the database: No servers found yet, Timeout: 5.0s, Topology Description: <TopologyDescription id: 6743722a8d12569d71bf5941, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>
+2024-11-24 12:37:51 PM: CRITICAL [menu_model.py:34] Failed to connect to the database: No servers found yet, Timeout: 5.0s, Topology Description: <TopologyDescription id: 6743727afe5c0688daa4a256, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None>]>
+2024-11-24 12:40:32 PM: CRITICAL [menu_model.py:34] Failed to connect to the database: localhost:27017: [Errno 111] Connection refused (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 5.0s, Topology Description: <TopologyDescription id: 6743731baf3a06445c2513a5, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [Errno 111] Connection refused (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2024-11-24 12:41:29 PM: INFO [menu_model.py:32] Connected to MongoDB database successfylly
+2024-11-24 12:41:29 PM: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2024-11-22 03:20:13 PM: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
-2024-11-22 03:20:13 PM: INFO [_internal.py:97]  * Restarting with stat
-2024-11-22 03:20:13 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 03:20:13 PM: WARNING [_internal.py:97]  * Debugger is active!
-2024-11-22 03:20:13 PM: INFO [_internal.py:97]  * Debugger PIN: 617-895-121
-2024-11-22 03:28:07 PM: INFO [_internal.py:97]  * Detected change in '/home/andreacarreon/maikaaa/maikaAPI/routes/payment_route.py', reloading
-2024-11-22 03:28:08 PM: INFO [_internal.py:97]  * Restarting with stat
-2024-11-22 03:29:21 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 03:29:21 PM: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2024-11-24 12:41:29 PM: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-11-24 12:41:29 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 12:41:29 PM: INFO [menu_model.py:32] Connected to MongoDB database successfylly
+2024-11-24 12:41:29 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-24 12:41:29 PM: INFO [_internal.py:97]  * Debugger PIN: 102-917-971
+2024-11-24 12:42:11 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 12:42:11] "GET /apidocs/ HTTP/1.1" 200 -
+2024-11-24 12:42:12 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 12:42:12] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 200 -
+2024-11-24 12:42:12 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 12:42:12] "GET /flasgger_static/lib/jquery.min.js HTTP/1.1" 200 -
+2024-11-24 12:42:12 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 12:42:12] "GET /apispec_1.json HTTP/1.1" 200 -
+2024-11-24 12:42:29 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 12:42:29] "[35m[1mPOST /menu-api/v1/menus HTTP/1.1[0m" 201 -
+2024-11-24 12:42:31 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 12:42:31] "[35m[1mPOST /menu-api/v1/menus HTTP/1.1[0m" 201 -
+2024-11-24 12:43:33 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 12:43:33] "GET /menu-api/v1/menus HTTP/1.1" 200 -
+2024-11-24 12:43:34 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 12:43:34] "GET /menu-api/v1/menus HTTP/1.1" 200 -
+2024-11-24 04:45:39 PM: INFO [menu_model.py:32] Connected to MongoDB database successfylly
+2024-11-24 04:45:39 PM: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2024-11-22 03:29:21 PM: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
-2024-11-22 03:29:21 PM: INFO [_internal.py:97]  * Restarting with stat
-2024-11-22 03:29:22 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 03:29:22 PM: WARNING [_internal.py:97]  * Debugger is active!
-2024-11-22 03:29:22 PM: INFO [_internal.py:97]  * Debugger PIN: 617-895-121
-2024-11-22 03:29:46 PM: ERROR [payment_route.py:57] Error adding a new payment: 'PaymentSchema' object has no attribute 'validate_table'
-2024-11-22 03:29:46 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 15:29:46] "[35m[1mPOST /api/v1/payments HTTP/1.1[0m" 500 -
-2024-11-22 03:32:15 PM: INFO [_internal.py:97]  * Detected change in '/home/andreacarreon/maikaaa/maikaAPI/routes/payment_route.py', reloading
-2024-11-22 03:32:16 PM: INFO [_internal.py:97]  * Restarting with stat
-2024-11-22 03:32:18 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 03:32:18 PM: WARNING [_internal.py:97]  * Debugger is active!
-2024-11-22 03:32:18 PM: INFO [_internal.py:97]  * Debugger PIN: 617-895-121
-2024-11-22 03:34:58 PM: INFO [_internal.py:97]  * Detected change in '/home/andreacarreon/maikaaa/maikaAPI/schemas/payment_schemas.py', reloading
-2024-11-22 03:34:58 PM: INFO [_internal.py:97]  * Restarting with stat
-2024-11-22 03:34:59 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 03:34:59 PM: WARNING [_internal.py:97]  * Debugger is active!
-2024-11-22 03:34:59 PM: INFO [_internal.py:97]  * Debugger PIN: 617-895-121
-2024-11-22 03:35:30 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 15:35:30] "[31m[1mPOST /api/v1/payments HTTP/1.1[0m" 400 -
-2024-11-22 03:36:02 PM: INFO [payment_services.py:51] Processing item: Tacos al Pastor, Price: 50.0, Quantity: 3
-2024-11-22 03:36:02 PM: INFO [payment_services.py:51] Processing item: Agua de Horchata, Price: 30.0, Quantity: 2
-2024-11-22 03:36:02 PM: ERROR [payment_route.py:59] Error adding a new payment: 'name'
-2024-11-22 03:36:02 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 15:36:02] "[35m[1mPOST /api/v1/payments HTTP/1.1[0m" 500 -
-2024-11-22 03:37:54 PM: INFO [payment_services.py:51] Processing item: Tacos al Pastor, Price: 50.0, Quantity: 3
-2024-11-22 03:37:54 PM: INFO [payment_services.py:51] Processing item: Agua de Horchata, Price: 30.0, Quantity: 2
-2024-11-22 03:37:54 PM: ERROR [payment_route.py:59] Error adding a new payment: 'name'
-2024-11-22 03:37:54 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 15:37:54] "[35m[1mPOST /api/v1/payments HTTP/1.1[0m" 500 -
-2024-11-22 03:38:16 PM: ERROR [payment_route.py:59] Error adding a new payment: 400 Bad Request: Failed to decode JSON object: Expecting property name enclosed in double quotes: line 2 column 24 (char 25)
-2024-11-22 03:38:16 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 15:38:16] "[35m[1mPOST /api/v1/payments HTTP/1.1[0m" 500 -
-2024-11-22 03:40:00 PM: INFO [payment_services.py:51] Processing item: Tacos al Pastor, Price: 50.0, Quantity: 3
-2024-11-22 03:40:00 PM: INFO [payment_services.py:51] Processing item: Agua de Horchata, Price: 30.0, Quantity: 2
-2024-11-22 03:40:00 PM: ERROR [payment_route.py:59] Error adding a new payment: 'name'
-2024-11-22 03:40:00 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 15:40:00] "[35m[1mPOST /api/v1/payments HTTP/1.1[0m" 500 -
-2024-11-22 03:40:35 PM: INFO [payment_services.py:51] Processing item: Tacos al Pastor, Price: 50.0, Quantity: 3
-2024-11-22 03:40:35 PM: INFO [payment_services.py:51] Processing item: Agua de Horchata, Price: 30.0, Quantity: 2
-2024-11-22 03:40:35 PM: ERROR [payment_route.py:59] Error adding a new payment: 'name'
-2024-11-22 03:40:35 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 15:40:35] "[35m[1mPOST /api/v1/payments HTTP/1.1[0m" 500 -
-2024-11-22 03:41:48 PM: INFO [_internal.py:97]  * Detected change in '/home/andreacarreon/maikaaa/maikaAPI/schemas/payment_schemas.py', reloading
-2024-11-22 03:41:49 PM: INFO [_internal.py:97]  * Restarting with stat
-2024-11-22 03:41:51 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 03:41:51 PM: WARNING [_internal.py:97]  * Debugger is active!
-2024-11-22 03:41:51 PM: INFO [_internal.py:97]  * Debugger PIN: 617-895-121
-2024-11-22 03:41:52 PM: INFO [payment_services.py:51] Processing item: Tacos al Pastor, Price: 50.0, Quantity: 3
-2024-11-22 03:41:52 PM: INFO [payment_services.py:51] Processing item: Agua de Horchata, Price: 30.0, Quantity: 2
-2024-11-22 03:41:52 PM: ERROR [payment_route.py:59] Error adding a new payment: 'name'
-2024-11-22 03:41:52 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 15:41:52] "[35m[1mPOST /api/v1/payments HTTP/1.1[0m" 500 -
-2024-11-22 03:42:35 PM: INFO [_internal.py:97]  * Detected change in '/home/andreacarreon/maikaaa/maikaAPI/schemas/payment_schemas.py', reloading
-2024-11-22 03:42:36 PM: INFO [_internal.py:97]  * Restarting with stat
-2024-11-22 03:42:37 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 03:42:37 PM: WARNING [_internal.py:97]  * Debugger is active!
-2024-11-22 03:42:37 PM: INFO [_internal.py:97]  * Debugger PIN: 617-895-121
-2024-11-22 03:42:39 PM: INFO [payment_services.py:51] Processing item: Tacos al Pastor, Price: 50.0, Quantity: 3
-2024-11-22 03:42:39 PM: INFO [payment_services.py:51] Processing item: Agua de Horchata, Price: 30.0, Quantity: 2
-2024-11-22 03:42:39 PM: ERROR [payment_route.py:59] Error adding a new payment: 'name'
-2024-11-22 03:42:39 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 15:42:39] "[35m[1mPOST /api/v1/payments HTTP/1.1[0m" 500 -
-2024-11-22 03:45:54 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 03:45:54 PM: INFO [payment_services.py:105] Payments fetched: [{'_id': 1, 'name': 'Order1', 'items': [{'dish': 'Tacos al Pastor', 'price': 50, 'quantity': 3}, {'dish': 'Agua de Horchata', 'price': 30, 'quantity': 2}]}, {'_id': 2, 'name': 'Order2', 'items': [{'dish': 'Pozole', 'price': 120, 'quantity': 1}, {'dish': 'Coca-Cola', 'price': 25, 'quantity': 2}]}, {'_id': 3, 'name': 'Order3', 'items': [{'dish': 'Enchiladas Verdes', 'price': 90, 'quantity': 2}, {'dish': 'Flan Napolitano', 'price': 40, 'quantity': 1}, {'dish': 'Café de Olla', 'price': 35, 'quantity': 2}]}]
-2024-11-22 03:45:54 PM: INFO [payment_services.py:51] Processing item: Tacos al Pastor, Price: 50, Quantity: 3
-2024-11-22 03:45:54 PM: INFO [payment_services.py:51] Processing item: Agua de Horchata, Price: 30, Quantity: 2
-2024-11-22 03:45:54 PM: INFO [payment_services.py:54] Total price for order Order1: 210
-2024-11-22 03:45:54 PM: INFO [payment_services.py:51] Processing item: Pozole, Price: 120, Quantity: 1
-2024-11-22 03:45:54 PM: INFO [payment_services.py:51] Processing item: Coca-Cola, Price: 25, Quantity: 2
-2024-11-22 03:45:54 PM: INFO [payment_services.py:54] Total price for order Order2: 170
-2024-11-22 03:45:54 PM: INFO [payment_services.py:51] Processing item: Enchiladas Verdes, Price: 90, Quantity: 2
-2024-11-22 03:45:54 PM: INFO [payment_services.py:51] Processing item: Flan Napolitano, Price: 40, Quantity: 1
-2024-11-22 03:45:54 PM: INFO [payment_services.py:51] Processing item: Café de Olla, Price: 35, Quantity: 2
-2024-11-22 03:45:54 PM: INFO [payment_services.py:54] Total price for order Order3: 290
-2024-11-22 03:45:54 PM: INFO [payment_services.py:109] Orders with totals: [{'order_name': 'Order1', 'total_price': 210}, {'order_name': 'Order2', 'total_price': 170}, {'order_name': 'Order3', 'total_price': 290}]
-2024-11-22 03:45:54 PM: INFO [payment_services.py:116] Connection to database was successfully closed.
-2024-11-22 03:47:29 PM: ERROR [payment_schemas.py:48] An error has occurred: {'items': ['Missing data for required field.']}
-2024-11-22 03:47:57 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 03:47:57 PM: INFO [payment_services.py:104] Payments fetched: [{'_id': 1, 'name': 'Order1', 'items': [{'dish': 'Tacos al Pastor', 'price': 50, 'quantity': 3}, {'dish': 'Agua de Horchata', 'price': 30, 'quantity': 2}]}, {'_id': 2, 'name': 'Order2', 'items': [{'dish': 'Pozole', 'price': 120, 'quantity': 1}, {'dish': 'Coca-Cola', 'price': 25, 'quantity': 2}]}, {'_id': 3, 'name': 'Order3', 'items': [{'dish': 'Enchiladas Verdes', 'price': 90, 'quantity': 2}, {'dish': 'Flan Napolitano', 'price': 40, 'quantity': 1}, {'dish': 'Café de Olla', 'price': 35, 'quantity': 2}]}]
-2024-11-22 03:47:57 PM: INFO [payment_services.py:51] Processing item: Tacos al Pastor, Price: 50, Quantity: 3
-2024-11-22 03:47:57 PM: INFO [payment_services.py:51] Processing item: Agua de Horchata, Price: 30, Quantity: 2
-2024-11-22 03:47:57 PM: INFO [payment_services.py:54] Total price for order Order1: 210
-2024-11-22 03:47:57 PM: INFO [payment_services.py:51] Processing item: Pozole, Price: 120, Quantity: 1
-2024-11-22 03:47:57 PM: INFO [payment_services.py:51] Processing item: Coca-Cola, Price: 25, Quantity: 2
-2024-11-22 03:47:57 PM: INFO [payment_services.py:54] Total price for order Order2: 170
-2024-11-22 03:47:57 PM: INFO [payment_services.py:51] Processing item: Enchiladas Verdes, Price: 90, Quantity: 2
-2024-11-22 03:47:57 PM: INFO [payment_services.py:51] Processing item: Flan Napolitano, Price: 40, Quantity: 1
-2024-11-22 03:47:57 PM: INFO [payment_services.py:51] Processing item: Café de Olla, Price: 35, Quantity: 2
-2024-11-22 03:47:57 PM: INFO [payment_services.py:54] Total price for order Order3: 290
-2024-11-22 03:47:57 PM: INFO [payment_services.py:115] Connection to database was successfully closed.
-2024-11-22 03:59:40 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 03:59:40 PM: INFO [_internal.py:97] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2024-11-22 03:59:40 PM: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
-2024-11-22 03:59:40 PM: INFO [_internal.py:97]  * Restarting with stat
-2024-11-22 03:59:40 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 03:59:40 PM: WARNING [_internal.py:97]  * Debugger is active!
-2024-11-22 03:59:40 PM: INFO [_internal.py:97]  * Debugger PIN: 617-895-121
-2024-11-22 04:00:43 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 16:00:43] "[33mPOST /api/v1/payment HTTP/1.1[0m" 404 -
-2024-11-22 04:02:07 PM: ERROR [payment_route.py:59] Error adding a new payment: 'PaymentSchema' object has no attribute 'validate_table'
-2024-11-22 04:02:07 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 16:02:07] "[35m[1mPOST /api/v1/payments HTTP/1.1[0m" 500 -
-2024-11-22 04:03:51 PM: INFO [_internal.py:97]  * Detected change in '/home/andreacarreon/maikaaa/maikaAPI/schemas/payment_schemas.py', reloading
-2024-11-22 04:03:51 PM: INFO [_internal.py:97]  * Restarting with stat
-2024-11-22 04:03:52 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 04:03:52 PM: WARNING [_internal.py:97]  * Debugger is active!
-2024-11-22 04:03:52 PM: INFO [_internal.py:97]  * Debugger PIN: 617-895-121
-2024-11-22 04:03:58 PM: ERROR [payment_route.py:59] Error adding a new payment: 'PaymentSchema' object has no attribute 'validate_order_number'
-2024-11-22 04:03:58 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 16:03:58] "[35m[1mPOST /api/v1/payments HTTP/1.1[0m" 500 -
-2024-11-22 04:04:58 PM: INFO [_internal.py:97]  * Detected change in '/home/andreacarreon/maikaaa/maikaAPI/schemas/payment_schemas.py', reloading
-2024-11-22 04:04:59 PM: INFO [_internal.py:97]  * Restarting with stat
-2024-11-22 04:04:59 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 04:04:59 PM: WARNING [_internal.py:97]  * Debugger is active!
-2024-11-22 04:04:59 PM: INFO [_internal.py:97]  * Debugger PIN: 617-895-121
-2024-11-22 04:05:23 PM: INFO [_internal.py:97]  * Detected change in '/home/andreacarreon/maikaaa/maikaAPI/schemas/payment_schemas.py', reloading
-2024-11-22 04:05:24 PM: INFO [_internal.py:97]  * Restarting with stat
-2024-11-22 04:05:25 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 04:05:25 PM: WARNING [_internal.py:97]  * Debugger is active!
-2024-11-22 04:05:25 PM: INFO [_internal.py:97]  * Debugger PIN: 617-895-121
-2024-11-22 04:05:27 PM: INFO [payment_services.py:51] Processing item: Tacos al Pastor, Price: 50.0, Quantity: 3
-2024-11-22 04:05:27 PM: INFO [payment_services.py:51] Processing item: Agua de Horchata, Price: 30.0, Quantity: 2
-2024-11-22 04:05:27 PM: ERROR [payment_route.py:59] Error adding a new payment: 'name'
-2024-11-22 04:05:27 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 16:05:27] "[35m[1mPOST /api/v1/payments HTTP/1.1[0m" 500 -
-2024-11-22 04:08:03 PM: INFO [_internal.py:97]  * Detected change in '/home/andreacarreon/maikaaa/maikaAPI/schemas/payment_schemas.py', reloading
-2024-11-22 04:08:04 PM: INFO [_internal.py:97]  * Restarting with stat
-2024-11-22 04:08:04 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 04:08:04 PM: WARNING [_internal.py:97]  * Debugger is active!
-2024-11-22 04:08:04 PM: INFO [_internal.py:97]  * Debugger PIN: 617-895-121
-2024-11-22 04:08:07 PM: INFO [payment_services.py:51] Processing item: Tacos al Pastor, Price: 50.0, Quantity: 3
-2024-11-22 04:08:07 PM: INFO [payment_services.py:51] Processing item: Agua de Horchata, Price: 30.0, Quantity: 2
-2024-11-22 04:08:07 PM: ERROR [payment_route.py:59] Error adding a new payment: 'name'
-2024-11-22 04:08:07 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 16:08:07] "[35m[1mPOST /api/v1/payments HTTP/1.1[0m" 500 -
-2024-11-22 04:08:33 PM: INFO [payment_services.py:51] Processing item: Tacos al Pastor, Price: 50.0, Quantity: 3
-2024-11-22 04:08:33 PM: INFO [payment_services.py:51] Processing item: Agua de Horchata, Price: 30.0, Quantity: 2
-2024-11-22 04:08:33 PM: ERROR [payment_route.py:59] Error adding a new payment: 'name'
-2024-11-22 04:08:33 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 16:08:33] "[35m[1mPOST /api/v1/payments HTTP/1.1[0m" 500 -
-2024-11-22 04:09:07 PM: INFO [payment_services.py:51] Processing item: Tacos al Pastor, Price: 50.0, Quantity: 3
-2024-11-22 04:09:07 PM: INFO [payment_services.py:51] Processing item: Agua de Horchata, Price: 30.0, Quantity: 2
-2024-11-22 04:09:07 PM: ERROR [payment_route.py:59] Error adding a new payment: 'name'
-2024-11-22 04:09:07 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 16:09:07] "[35m[1mPOST /api/v1/payments HTTP/1.1[0m" 500 -
-2024-11-22 04:14:18 PM: INFO [_internal.py:97]  * Detected change in '/home/andreacarreon/maikaaa/maikaAPI/services/payment_services.py', reloading
-2024-11-22 04:14:18 PM: INFO [_internal.py:97]  * Restarting with stat
-2024-11-22 04:14:18 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 04:14:18 PM: WARNING [_internal.py:97]  * Debugger is active!
-2024-11-22 04:14:18 PM: INFO [_internal.py:97]  * Debugger PIN: 617-895-121
-2024-11-22 04:14:48 PM: ERROR [payment_route.py:59] Error adding a new payment: 'PaymentService' object has no attribute 'calculate_order_total'
-2024-11-22 04:14:48 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 16:14:48] "[35m[1mPOST /api/v1/payments HTTP/1.1[0m" 500 -
-2024-11-22 04:16:09 PM: INFO [_internal.py:97]  * Detected change in '/home/andreacarreon/maikaaa/maikaAPI/routes/payment_route.py', reloading
-2024-11-22 04:16:10 PM: INFO [_internal.py:97]  * Restarting with stat
-2024-11-22 04:16:11 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 04:16:11 PM: WARNING [_internal.py:97]  * Debugger is active!
-2024-11-22 04:16:11 PM: INFO [_internal.py:97]  * Debugger PIN: 617-895-121
-2024-11-22 04:16:17 PM: ERROR [payment_route.py:57] Error adding a new payment: 'PaymentSchema' object has no attribute 'validate_name'
-2024-11-22 04:16:17 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 16:16:17] "[35m[1mPOST /api/v1/payments HTTP/1.1[0m" 500 -
-2024-11-22 04:17:42 PM: INFO [_internal.py:97]  * Detected change in '/home/andreacarreon/maikaaa/maikaAPI/schemas/payment_schemas.py', reloading
-2024-11-22 04:17:43 PM: INFO [_internal.py:97]  * Restarting with stat
-2024-11-22 04:17:43 PM: INFO [payment_model.py:40] Connected to MongoDB database successfully
-2024-11-22 04:17:43 PM: WARNING [_internal.py:97]  * Debugger is active!
-2024-11-22 04:17:43 PM: INFO [_internal.py:97]  * Debugger PIN: 617-895-121
-2024-11-22 04:17:49 PM: ERROR [payment_route.py:57] Error adding a new payment: 'PaymentSchema' object has no attribute 'validate_user_id'
-2024-11-22 04:17:49 PM: INFO [_internal.py:97] 127.0.0.1 - - [22/Nov/2024 16:17:49] "[35m[1mPOST /api/v1/payments HTTP/1.1[0m" 500 -
-2024-11-22 06:23:10 PM: INFO [_internal.py:97]  * Detected change in '/home/andreacarreon/maikaaa/maikaAPI/app.py', reloading
-2024-11-22 06:23:11 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 04:45:39 PM: INFO [_internal.py:97] [33mPress CTRL+C to quit[0m
+2024-11-24 04:45:39 PM: INFO [_internal.py:97]  * Restarting with stat
+2024-11-24 04:45:40 PM: INFO [menu_model.py:32] Connected to MongoDB database successfylly
+2024-11-24 04:45:40 PM: WARNING [_internal.py:97]  * Debugger is active!
+2024-11-24 04:45:40 PM: INFO [_internal.py:97]  * Debugger PIN: 102-917-971
+2024-11-24 04:45:44 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:44] "GET /apidocs/ HTTP/1.1" 200 -
+2024-11-24 04:45:44 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:44] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-11-24 04:45:44 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:44] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-11-24 04:45:44 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:44] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2024-11-24 04:45:44 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:44] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-11-24 04:45:44 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:44] "GET /apispec_1.json HTTP/1.1" 200 -
+2024-11-24 04:45:51 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:51] "GET /apidocs/ HTTP/1.1" 200 -
+2024-11-24 04:45:51 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:51] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-11-24 04:45:51 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:51] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-11-24 04:45:51 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:51] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2024-11-24 04:45:51 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:51] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-11-24 04:45:52 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:45:52] "GET /apispec_1.json HTTP/1.1" 200 -
+2024-11-24 04:46:41 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:46:41] "GET /apidocs/ HTTP/1.1" 200 -
+2024-11-24 04:46:41 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:46:41] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2024-11-24 04:46:41 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:46:41] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2024-11-24 04:46:41 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:46:41] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2024-11-24 04:46:41 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:46:41] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2024-11-24 04:46:42 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:46:42] "GET /apispec_1.json HTTP/1.1" 200 -
+2024-11-24 04:46:48 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:46:48] "GET /menu-api/v1/menus HTTP/1.1" 200 -
+2024-11-24 04:46:51 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:46:51] "GET /menu-api/v1/menus HTTP/1.1" 200 -
+2024-11-24 04:47:00 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:47:00] "[35m[1mPOST /menu-api/v1/menus HTTP/1.1[0m" 201 -
+2024-11-24 04:47:01 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:47:01] "[35m[1mPOST /menu-api/v1/menus HTTP/1.1[0m" 201 -
+2024-11-24 04:47:27 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:47:27] "GET /menu-api/v1/menus HTTP/1.1" 200 -
+2024-11-24 04:50:23 PM: INFO [_internal.py:97] 127.0.0.1 - - [24/Nov/2024 16:50:23] "[35m[1mPOST /menu-api/v1/menus HTTP/1.1[0m" 201 -
