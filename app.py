@@ -76,3 +76,10 @@ if __name__ == '__main__':
         app.run(debug=True)
     finally:
         db_conn.close_connection()
+        db_conn_inventory.close_connection()
+        db_conn_menu.close_connection()
+        db_conn_order.close_connection()
+        db_conn_payment.close_connection()
+        db_conn_reservation.close_connection()
+        db_conn_staff.close_connection()
+        
