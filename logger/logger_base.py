@@ -29,10 +29,3 @@ class Logger:
         self.logger.critical(message, stacklevel=2)
 
 
-if __name__ == '__main__':
-    logger = Logger()
-    logger.debug('Message level: DEBUG')
-    logger.info('Message level: INFO')
-    logger.warning('Message level: WARNING')
-    logger.error('Message level: ERROR')
-    logger.critical('Message level: CRITICAL')
