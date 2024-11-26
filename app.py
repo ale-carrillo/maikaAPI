@@ -16,10 +16,19 @@ from models.inventory_model import InventoryModel
 from services.inventory_service import InventoryService
 from schemas.inventory_schema import InventorySchema
 from routes.inventory_routes import InventoryRoutes
+from models.payment_model import PaymentModel
+from services.payment_services import PaymentService
+from schemas.payment_schemas import PaymentSchema
+from routes.payment_route import PaymentRoutes
+from models.order_model import OrderModel
+from services.order_service import OrderService
+from schemas.order_schemas import OrderSchema
+from routes.order_route import OrderRoutes
+from routes.healthcheck_routes import HealthcheckRoutes
 from flasgger import Swagger
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 swagger = Swagger(app)
 
 # Menu
@@ -71,11 +80,14 @@ order_schema = OrderSchema()
 order_routes = OrderRoutes(order_service, order_schema)
 app.register_blueprint(order_routes)
 
+#Healthcheck
+healthcheck_routes = HealthcheckRoutes()
+app.register_blueprint(healthcheck_routes)
+
 if __name__ == '__main__':
     try:
         app.run(debug=True)
     finally:
-        db_conn.close_connection()
         db_conn_inventory.close_connection()
         db_conn_menu.close_connection()
         db_conn_order.close_connection()

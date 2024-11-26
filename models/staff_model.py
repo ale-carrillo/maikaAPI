@@ -38,17 +38,5 @@ class StaffModel:
         if self.client:
             self.client.close()
 
-if __name__=='__main__':
-    db_conn = StaffModel()
-    logger = Logger()
-
-
-    try:
-        db_conn.connect_to_database()
-    except Exception as e:
-        logger.critical(f'An error ocurred {e}')
-    finally:
-        db_conn.close_connection()
-        logger.info('COnnection to the database was succesfully closed')
 
         

@@ -17,7 +17,6 @@ class ReservationRoute(Blueprint):
         self.route('/api/v1/reservations', methods=['POST'])(self.add_reservation)
         self.route('/api/v1/reservations/<int:reservation_id>', methods = ['PUT'])(self.update_reservation)
         self.route('/api/v1/reservations/<int:reservation_id>', methods = ['DELETE'])(self.delete_reservation)
-        self.route('/healthcheck', methods=['GET'])(self.healthcheck)
     
     @swag_from({
         'tags': ['Reservations'],
@@ -273,24 +272,3 @@ class ReservationRoute(Blueprint):
         except Exception as e:
             self.logger.error(f'Error deleting the Reservation data: {e}')
             jsonify({'error': f'Error deleting the Reservation data: {e}'}), 500
-
-    @swag_from({
-        'tags': ['Health'],
-        'responses': {
-            200: {
-                'description': 'Service is up and running',
-                'schema': {
-                    'type': 'object',
-                    'properties': {
-                        'status': {'type': 'string'}
-                    }
-                }
-            },
-            500: {
-                'description': 'Internal server error'
-            }
-        }
-    })
-    def healthcheck(self):
-    # Healhthcheck endpoint
-        return jsonify({ 'status': 'up' }), 200

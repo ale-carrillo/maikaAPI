@@ -16,7 +16,6 @@ class StaffRoutes(Blueprint):
         self.route('/api/v1/staff', methods=['POST'])(self.add_employee)
         self.route('/api/v1/staff/<int:employee_id>', methods=['PUT'])(self.update_employee)
         self.route('/api/v1/staff/<int:employee_id>', methods=['DELETE'])(self.delete_employee)
-        self.route('/healthcheck', methods=['GET'])(self.healthcheck)
 
     @swag_from({
         'tags': ['Staff'],
@@ -231,12 +230,3 @@ class StaffRoutes(Blueprint):
             self.logger.error(f'Error deleting employee: {e}')
             return jsonify({'error': 'Internal server error'}), 500
 
-    @swag_from({
-        'tags': ['Health'],
-        'responses': {
-            200: {'description': 'Service is up and running'},
-            500: {'description': 'Internal server error'}
-        }
-    })
-    def healthcheck(self):
-        return jsonify({'status': 'up'}), 200

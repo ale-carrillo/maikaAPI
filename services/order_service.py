@@ -74,37 +74,3 @@ class OrderService:
             self.logger.error(f'Error deleting the order with ID {order_id}: {e}')
             return jsonify({'error': f'Error deleting the order: {e}'}), 500
 
-
-print('Starting application...')
-if __name__ == '__main__':
-    from models.order_model import OrderModel
-
-    logger = Logger()
-    db_conn = OrderModel()
-    order_service = OrderService(db_conn)
-
-    try:
-        db_conn.connect_to_database()
-        orders = order_service.get_all_orders()
-        logger.info(f'Orders fetched: {orders}')
-
-        # Add order
-        new_order = order_service.add_order({
-            'name': 'O1',
-            'table': 1,
-            'dishes': [
-                {'name': 'Pizza', 'price': 15.99, 'quantity': 2},
-                {'name': 'Pasta', 'price': 12.50, 'quantity': 771}
-            ]
-        })
-        logger.info(f'New order added: {new_order}')
-
-        # Get order by ID
-        order = order_service.get_order_by_id(3)
-        logger.info(f'Order fetched by ID: {order}')
-
-    except Exception as e:
-        logger.error(f'An error has occurred: {e}')
-    finally:
-        db_conn.close_connection()
-        logger.info('Connection to database was successfully closed.')

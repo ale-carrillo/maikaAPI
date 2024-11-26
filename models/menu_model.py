@@ -37,16 +37,3 @@ class MenuModel:
     def close_connection(self):
         if self.client:
             self.client.close()
-
-if __name__ == '__main__':
-    db_conn = MenuModel()
-    logger = Logger()
-    print(logger)
-
-    try:
-        db_conn.connect_to_database()
-    except Exception as e:
-        logger.critical(f'An error ocurred: {e}')
-    finally:
-        db_conn.close_connection()
-        logger.info('Connection to the database was successfully closed')

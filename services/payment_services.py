@@ -88,31 +88,3 @@ class PaymentService:
             return jsonify({'error': f'Error deleting the payment: {e}'}), 500
 
 
-if __name__ == '_main_':
-    from models.payment_model import PaymentModel
-
-    logger = Logger()
-    db_conn = PaymentModel()
-    payment_service = PaymentService(db_conn)
-
-    try:
-        db_conn.connect_to_database()
-        payments = payment_service.get_all_payments()
-        logger.info(f'Payments fetched: {payments}')
-        new_payment = payment_service.add_payment({
-            'name': 'Payment1',
-            'user_id': 1,
-            'dishes': [
-                {'dish': 'Burger', 'price': 10.99, 'quantity': 2},
-                {'dish': 'Fries', 'price': 3.50, 'quantity': 1}
-            ]
-        })
-        logger.info(f'New payment added: {new_payment}')
-        payment = payment_service.get_payment_by_id(new_payment['_id'])
-        logger.info(f'Payment fetched by ID: {payment}')
-
-    except Exception as e:
-        logger.error(f'An error has occurred: {e}')
-    finally:
-        db_conn.close_connection()
-        logger.info('Connection to database was successfully closed.')

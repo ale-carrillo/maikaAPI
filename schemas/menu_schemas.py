@@ -28,16 +28,4 @@ class MenuSchema:
         if not value:
             raise ValidationError("Image must be a base-64-image string.")
         
-        
-if __name__ == "__main__":
-    from logger.logger_base import Logger
-
-    logger = Logger()
-    schema = MenuSchema()
-
-    schema.validate_meal('dasdasd')
-
-    try:
-        schema.validate_description('d')
-    except ValidationError as e:
-        logger.error(f'An error has ocurred: {e}')
+ 

@@ -45,32 +45,3 @@ class PaymentSchema(Schema):
     def validate_dishes(self, value):
         if not value or len(value) == 0:
             raise ValidationError('The dishes field must contain at least one dish.')
-
-if __name__ == '__main__':
-    schema = PaymentSchema()
-    payment_data = {
-        "_id": 311,
-        "name": "BHBHB DWUB",
-        "table": 4,
-        "dishes": [
-            {
-                "name": "Caesar Salad",
-                "price": 12,
-                "quantity": 1
-            },
-            {
-                "name": "Spaghetti Carbonara",
-                "price": 18,
-                "quantity": 1
-            }
-        ],
-        "total": 0,  
-        "rfc": "ABCD123456XYZ",  
-        "payment_type": "Credit Card"
-    }
-
-    try:
-        validated_data = schema.load(payment_data)
-        print("Validated data:", validated_data)
-    except ValidationError as e:
-        print("Validation errors:", e.messages)
