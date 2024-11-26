@@ -25,25 +25,3 @@ class MenuService:
             self.logger.error(f'Error creating the new meal: {e}')
             return jsonify({ 'error': f'Error creating the new meal: {e}' }), 500
 
-if __name__ == '__main__':
-    from models.menu_model import MenuModel
-
-    logger = Logger()
-    db_conn = MenuModel()
-    menbu_service = MenuService(db_conn)
-
-    try:
-        db_conn.connect_to_database()
-        meals = menbu_service.get_all_meals()
-        print(f'POrueba de platillos: {meals}')
-        logger.info(f'POrueba de platillos: {meals}')
-
-        new_meal = menbu_service.add_meal({'meal': 'Pasta', 'description': 'Pasta is a type of food made from a mixture of flour'})
-        logger.info(f'New meal added: {new_meal}')
-
-
-    except Exception as e:
-        logger.error(f'An error has ocurred: {e}')
-    finally:
-        db_conn.close_connection()
-        logger.info('Connection to database was succesfully closed.')

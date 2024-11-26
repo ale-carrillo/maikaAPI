@@ -66,22 +66,3 @@ class ReservationSchema(Schema):
         email_regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
         if not re.match(email_regex, value):
             raise ValidationError("Invalid email address.")
-
-if __name__ == "__main__":
-    from logger.logger_base import Logger
-
-    logger = Logger()
-    schema = ReservationSchema()
-
-    try:
-        schema.validate_date(test_data['date'])
-        schema.validate_people(test_data['people'])
-        schema.validate_t_reservation(test_data['t_reservation'])
-        schema.validate_name(test_data['name'])
-        schema.validate_last_name(test_data['last_name'])
-        schema.validate_phone(test_data['phone'])
-        schema.validate_email(test_data['email'])
-        schema.validate_special(test_data['special'])
-        logger.info("All fields passed validation.")
-    except ValidationError as e:
-        logger.error(f"An error has occurred: {e}")

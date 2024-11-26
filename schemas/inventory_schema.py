@@ -34,19 +34,3 @@ class InventorySchema:
         if not value:
             raise ValidationError("Image must be a base-64-image string.")
 
-
-# Test
-if __name__ == "__main__":
-    from logger.logger_base import Logger
-
-    logger = Logger()
-    schema = InventorySchema()
-
-
-    try:
-        schema.validate_name('Corn')
-        schema.validate_unit('Kg')
-        schema.validate_existence(5)
-        schema.validate_image('SOME IMAGE IN BASE 64')
-    except ValidationError as e:
-        logger.error(f'An error has ocurred: {e}')

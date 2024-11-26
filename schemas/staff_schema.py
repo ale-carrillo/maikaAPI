@@ -59,23 +59,3 @@ class StaffSchema(Schema):
         if not value.startswith("data:image/"):
             raise ValidationError("Avatar must be a valid base-64 image string.")
 
-# Example usage
-if __name__ == "__main__":
-    from marshmallow import ValidationError
-
-    schema = StaffSchema()
-
-    try:
-        data = {
-            "name": "John Doe",
-            "title": "Manager",
-            "email": "john.doe@example.com",
-            "salary": 75000.0,
-            "birthday": "1985-06-15",
-            "status": True,
-            "avatar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAA..."
-        }
-        schema.load(data)
-        print("Validation passed.")
-    except ValidationError as e:
-        print(f"Validation errors: {e.messages}")
