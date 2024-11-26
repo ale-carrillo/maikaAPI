@@ -54,6 +54,23 @@ inventory_schema = InventorySchema()
 inventory_routes = InventoryRoutes(inventory_service, inventory_schema)
 app.register_blueprint(inventory_routes)
 
+
+# Payment
+db_conn_payment = PaymentModel()
+db_conn_payment.connect_to_database()
+payment_service = PaymentService(db_conn_payment)
+payment_schema = PaymentSchema()
+payment_routes = PaymentRoutes(payment_service, payment_schema)
+app.register_blueprint(payment_routes)
+
+# Order
+db_conn_order = OrderModel()
+db_conn_order.connect_to_database()
+order_service = OrderService(db_conn_order)
+order_schema = OrderSchema()
+order_routes = OrderRoutes(order_service, order_schema)
+app.register_blueprint(order_routes)
+
 if __name__ == '__main__':
     try:
         app.run(debug=True)
