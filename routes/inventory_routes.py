@@ -14,11 +14,11 @@ class InventoryRoutes(Blueprint):
 
     # Routes
     def register_routes(self):
-        self.route('/api/v1/inventories', methods=['GET'])(self.get_inventories)
-        self.route('/api/v1/inventories', methods=['POST'])(self.add_inventories)
-        self.route('/api/v1/inventories/<int:inventory_id>', methods = ['PUT'])(self.update_inventory)
-        self.route('/api/v1/inventories/existence/<int:inventory_id>', methods = ['PUT'])(self.update_inventory_existence)
-        self.route('/api/v1/inventories/<int:inventory_id>', methods = ['DELETE'])(self.delete_inventory)
+        self.route('/api/v1/inventories', methods=['GET', 'OPTIONS'])(self.get_inventories)
+        self.route('/api/v1/inventories', methods=['POST', 'OPTIONS'])(self.add_inventories)
+        self.route('/api/v1/inventories/<int:inventory_id>', methods = ['PUT', 'OPTIONS'])(self.update_inventory)
+        self.route('/api/v1/inventories/existence/<int:inventory_id>', methods = ['PUT', 'OPTIONS'])(self.update_inventory_existence)
+        self.route('/api/v1/inventories/<int:inventory_id>', methods = ['DELETE', 'OPTIONS'])(self.delete_inventory)
     
     @swag_from({
         'tags': ['Inventories'],

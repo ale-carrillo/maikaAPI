@@ -13,7 +13,7 @@ RUN apk update && \
 
 EXPOSE 8000
 
-HEALTHCHECK CMD curl --fail http://healthcheck_API:8000/healthcheck || exit 1
+HEALTHCHECK CMD curl --fail http://$(ip -o -4 addr list | grep eth0 | awk '{print $4}' | sed 's/...$//'):8000/healthcheck || exit 1
 
 USER app
 

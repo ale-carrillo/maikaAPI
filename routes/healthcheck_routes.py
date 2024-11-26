@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, jsonify
 from flasgger import swag_from
 
 # Routes for Healthcheck
@@ -9,7 +9,7 @@ class HealthcheckRoutes(Blueprint):
 
     # Routes
     def register_routes(self):
-        self.route('/healthcheck', methods=['GET'])(self.healthcheck)
+        self.route('/healthcheck', methods=['GET', 'OPTIONS'])(self.healthcheck)
     
   
     @swag_from({
