@@ -17,7 +17,6 @@ class OrderRoutes(Blueprint):
         self.route('/api/v1/orders', methods=['POST'])(self.add_order)
         self.route('/api/v1/orders/<int:order_id>', methods=['PUT'])(self.update_order)
         self.route('/api/v1/orders/<int:order_id>', methods=['DELETE'])(self.delete_order)
-        self.route('/healthcheck', methods=['GET'])(self.healthcheck)
 
     @swag_from({
         'tags': ['Orders'],
@@ -235,13 +234,3 @@ class OrderRoutes(Blueprint):
             self.logger.error(f'Error deleting the order data: {e}')
             return jsonify({'error': f'Error deleting the order data: {e}'}), 500
 
-    @swag_from({
-        'tags': ['Health'],
-        'summary': 'Health check',
-        'description': 'Verify the service is up and running.',
-        'responses': {
-            200: {'description': 'Service is running'}
-        }
-    })
-    def healthcheck(self):
-        return jsonify({'status': 'up'}), 200

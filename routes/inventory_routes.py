@@ -19,7 +19,6 @@ class InventoryRoutes(Blueprint):
         self.route('/api/v1/inventories/<int:inventory_id>', methods = ['PUT'])(self.update_inventory)
         self.route('/api/v1/inventories/existence/<int:inventory_id>', methods = ['PUT'])(self.update_inventory_existence)
         self.route('/api/v1/inventories/<int:inventory_id>', methods = ['DELETE'])(self.delete_inventory)
-        self.route('/healthcheck', methods=['GET'])(self.healthcheck)
     
     @swag_from({
         'tags': ['Inventories'],
@@ -307,24 +306,3 @@ class InventoryRoutes(Blueprint):
         except Exception as e:
             self.logger.error(f'Error deleting the inventory data: {e}')
             jsonify({'error': f'Error deleting the inventory data: {e}'}), 500
-
-    @swag_from({
-        'tags': ['Health'],
-        'responses': {
-            200: {
-                'description': 'Service is up and running',
-                'schema': {
-                    'type': 'object',
-                    'properties': {
-                        'status': {'type': 'string'}
-                    }
-                }
-            },
-            500: {
-                'description': 'Internal server error'
-            }
-        }
-    })
-    # Veriifying a healthcheck
-    def healthcheck(self):
-        return jsonify({ 'status': 'up' }), 200

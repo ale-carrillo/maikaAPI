@@ -71,6 +71,10 @@ order_schema = OrderSchema()
 order_routes = OrderRoutes(order_service, order_schema)
 app.register_blueprint(order_routes)
 
+#Healthcheck
+healthcheck_routes = HealthcheckRoutes()
+app.register_blueprint(healthcheck_routes)
+
 if __name__ == '__main__':
     try:
         app.run(debug=True)

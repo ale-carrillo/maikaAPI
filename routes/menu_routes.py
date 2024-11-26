@@ -14,7 +14,6 @@ class MenuRoutes(Blueprint):
     def register_routes(self):
         self.route('/menu-api/v1/menus', methods=['GET'])(self.get_meals)
         self.route('/menu-api/v1/menus', methods=['POST'])(self.add_meals)
-        self.route('/healthcheck', methods=['GET'])(self.healthcheck)
     
     @swag_from({
         'tags': ['meals'],
@@ -107,5 +106,3 @@ class MenuRoutes(Blueprint):
             self.logger.error(f'Error adding new meal to the database: {e}')
             return jsonify({ 'error': f'An exception has ocurred: {e}' }), 500
          
-    def healthcheck(self):
-        return jsonify({ 'status': 'up' }), 200
