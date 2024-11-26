@@ -1,0 +1,189 @@
+services:
+    mongodb:
+      image: mongo
+      container_name: mongodb
+      restart: always
+      volumes:
+        - /opt/mongodb/maika:/data/db
+      environment:
+        MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+        MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      networks:
+        - maika_network
+      
+    healthcheck_api:
+      build: .
+      image: healthcheck_api:v1.0.0
+      container_name: healthcheck_api
+      restart: always
+      ports:
+        - "8000:8000"
+      deploy:
+        resources:
+          limits:
+            memory: 512M
+            cpus: 1.0
+      environment:
+        MONGODB_USER: ${MONGO_INITDB_ROOT_USERNAME}
+        MONGODB_PASS: ${MONGO_INITDB_ROOT_PASSWORD}
+        MONGODB_HOST: mongodb
+      depends_on:
+        - mongodb
+      networks:
+        - maika_network
+
+    inventory_api:
+      build: .
+      image: inventory_api:v1.0.0
+      container_name: inventory_api
+      restart: always
+      ports:
+        - "8001:8000"
+      deploy:
+        resources:
+          limits:
+            memory: 512M
+            cpus: 1.0
+      environment:
+        MONGODB_USER: ${MONGO_INITDB_ROOT_USERNAME}
+        MONGODB_PASS: ${MONGO_INITDB_ROOT_PASSWORD}
+        MONGODB_HOST: mongodb
+      depends_on:
+        - mongodb
+      networks:
+        - maika_network
+    
+    menu_api:
+      build: .
+      image: menu_api:v1.0.0
+      container_name: menu_api
+      restart: always
+      ports:
+        - "8002:8000"
+      deploy:
+        resources:
+          limits:
+            memory: 512M
+            cpus: 1.0
+      environment:
+        MONGODB_USER: ${MONGO_INITDB_ROOT_USERNAME}
+        MONGODB_PASS: ${MONGO_INITDB_ROOT_PASSWORD}
+        MONGODB_HOST: mongodb
+      depends_on:
+        - mongodb
+      networks:
+        - maika_network
+
+    order_api:
+      build: .
+      image: order_api:v1.0.0
+      container_name: order_api
+      restart: always
+      ports:
+        - "8003:8000"
+      deploy:
+        resources:
+          limits:
+            memory: 512M
+            cpus: 1.0
+      environment:
+        MONGODB_USER: ${MONGO_INITDB_ROOT_USERNAME}
+        MONGODB_PASS: ${MONGO_INITDB_ROOT_PASSWORD}
+        MONGODB_HOST: mongodb
+      depends_on:
+        - mongodb
+      networks:
+        - maika_network
+    
+    payment_api:
+      build: .
+      image: payment_api:v1.0.0
+      container_name: payment_api
+      restart: always
+      ports:
+        - "8004:8000"
+      deploy:
+        resources:
+          limits:
+            memory: 512M
+            cpus: 1.0
+      environment:
+        MONGODB_USER: ${MONGO_INITDB_ROOT_USERNAME}
+        MONGODB_PASS: ${MONGO_INITDB_ROOT_PASSWORD}
+        MONGODB_HOST: mongodb
+      depends_on:
+        - mongodb
+      networks:
+        - maika_network
+    
+    reservations_api:
+      build: .
+      image: reservations_api:v1.0.0
+      container_name: reservations_api
+      restart: always
+      ports:
+        - "8005:8000"
+      deploy:
+        resources:
+          limits:
+            memory: 512M
+            cpus: 1.0
+      environment:
+        MONGODB_USER: ${MONGO_INITDB_ROOT_USERNAME}
+        MONGODB_PASS: ${MONGO_INITDB_ROOT_PASSWORD}
+        MONGODB_HOST: mongodb
+      depends_on:
+        - mongodb
+      networks:
+        - maika_network
+    
+    staff_api:
+      build: .
+      image: staff_api:v1.0.0
+      container_name: staff_api
+      restart: always
+      ports:
+        - "8006:8000"
+      deploy:
+        resources:
+          limits:
+            memory: 512M
+            cpus: 1.0
+      environment:
+        MONGODB_USER: ${MONGO_INITDB_ROOT_USERNAME}
+        MONGODB_PASS: ${MONGO_INITDB_ROOT_PASSWORD}
+        MONGODB_HOST: mongodb
+      depends_on:
+        - mongodb
+      networks:
+        - maika_network
+
+    web:
+      build:
+        context: ./maika-front
+        dockerfile: Dockerfile
+      container_name: maika
+      image: maika:v1.1.0
+      restart: always
+      ports:
+        - "3000:3000"
+      deploy:
+        resources:
+          limits:
+            memory: 512M
+            cpus: 1.0
+      depends_on:
+        - healthcheck_api
+        - inventory_api
+        - menu_api
+        - order_api
+        - payment_api
+        - reservations_api
+        - staff_api
+      networks:
+        - maika_network
+
+networks:
+  maika_network:
+    driver: bridge
+
